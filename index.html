@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Creation</title>
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Newsletter Creation</h1>
+    <form id="formglobal">
+
+        <!-- Input field for document title -->
+        <label for="documentTitle">Document Title:</label>
+        <input type="text" id="documentTitle"><br><br>
+
+        <!-- Language selection for header/footer -->
+        <label for="language">Document Language:</label>
+        <select name="language" id="language">
+            <option value="">--Please choose an option--</option>
+            <option value="fr">French</option>
+            <option value="uk">English</option>
+            <option value="es">Spanish</option>
+        </select>
+    </form>
+
+    <!-- Container where product, title, banner, and link forms will appear -->
+    <div id="corps"></div>
+
+    <!-- Section containing buttons to create forms -->
+    <div id="create-button">
+        <button id="product">Add 2 Products</button>
+        <button id="title">Add Title</button>
+        <button id="banner">Add Banner</button>
+        <button id="link">Add Link</button>
+    </div>
+
+    <button id="submit">Save</button>
+    <button id="generateHTML">Generate HTML File</button>
+</body>
+</html>
