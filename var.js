@@ -257,20 +257,70 @@ export let footerES = `<table class="resize" width="600" border="0" align="cente
 </tr>
 </table>`
 
-    export let headerES = `<table class="resize" align="center" width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#276EF1" style="background:linear-gradient(45deg, #6121F5 0%, #276EF1 100%);">
-<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
-<tr>
-    <td class="resize" width="600" valign="center" align="center">
-        <table class="resize_w90" width="540" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td width="30%" align="left" valign="middle"><a href="https://www.rajapack.es/?utm" target="_blank"><img src="https://imgnews.raja-group.com/00-structure/header/ES-logo-raja-70-years.gif" width="160" height="52" style="display:block; padding:0; margin:0; border:0; width:160px; height:52px;" alt="RAJA"/></a></td>
-                <td width="62%" align="right" style="font-size:12px; font-weight:400; color:#FFFFFF;"><a href="%%view_online%%" style="font-size:12px; font-weight:400; color:#FFFFFF; text-decoration:none;">Ver versión online</a></td>
-                <td width="8%" align="right"><a href="%%view_online%%"><img src="https://imgnews.raja-group.com/00-structure/header/picto-online.png" width="27" height="27" style="display:block; padding:0; margin:0; border:0; width:27px; height:27px;" alt=""/></a></td>
-            </tr>
-        </table>
-    </td>
-</tr>
-<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>`
+    export let headerES = `<table class="resize" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#EDF1F7;">
+	<tr><td style="display:none; font-size:12px;">
+		Cross border or freight packaging - Available today
+		<span style="display:none;max-height:0px;overflow:hidden"> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌</span></td></tr>
+	<tr>
+		<td align="center">
+                
+    <!--HEADER 70 ans-->
+<table class="resize" align="center" width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#276EF1" style="background:linear-gradient(45deg, #6121F5 0%, #276EF1 100%);">
+	<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
+	<tr>
+		<td class="resize" width="600" valign="center" align="center">
+			<table class="resize_w90" width="540" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="30%" align="left" valign="middle"><a href="https://www.rajapack.es/?utm" target="_blank"><img src="https://imgnews.raja-group.com/00-structure/header/ES-logo-raja-70-years.gif" width="160" height="52" style="display:block; padding:0; margin:0; border:0; width:160px; height:52px;" alt="RAJA"/></a></td>
+					<td width="62%" align="right" style="font-size:12px; font-weight:400; color:#FFFFFF;"><a href="%%view_online%%" style="font-size:12px; font-weight:400; color:#FFFFFF; text-decoration:none;">Ver versión online</a></td>
+					<td width="8%" align="right"><a href="%%view_online%%"><img src="https://imgnews.raja-group.com/00-structure/header/picto-online.png" width="27" height="27" style="display:block; padding:0; margin:0; border:0; width:27px; height:27px;" alt=""/></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
+</table>
+<!--END HEADER-->
+            
+            
+			
+<!--MENU-->
+<table class="resize" width="600" border="0" cellspacing="0" cellpadding="0" style="color:#656F84; font-size:12px; background-color:#FFFFFF;">
+	<tr><td class="none" style="font-size:0; display:block; height:15px;">&nbsp;</td></tr>
+	<tr>
+		<td class="none" align="center">
+			<table class="resize_w96" border="0" cellspacing="0" cellpadding="0" style="color:#656F84; font-size:12px; background-color:#FFFFFF;">
+				<tr>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.es/materiales-embalaje-proteccion_cms_000072.html?utm_source=newsletter&utm_medium=email&utm_campaign=ES4324_Shipping" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Cajas y embalajes<br />para envíos</a>
+					</td>
+					<td style="font-size:0; width:6px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:6px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.es/material-para-su-almacen_cms_000070.html?utm_source=newsletter&utm_medium=email&utm_campaign=ES4324_Shipping" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Equipamiento<br />almacén y seguridad</a>
+					</td>
+					<td style="font-size:0; width:6px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:6px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.es/material-oficina_C80.html?utm_source=newsletter&utm_medium=email&utm_campaign=ES4324_Shipping" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Material<br />de oficina</a>
+					</td>
+					<td style="font-size:0; width:6px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:6px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.es/higiene-limpieza_C75.html?utm_source=newsletter&utm_medium=email&utm_campaign=ES4324_Shipping" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Higiene<br />y limpieza</a>
+					</td>
+					<td style="font-size:0; width:6px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:6px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.es/rajaboutique_cms_000067.html?utm_source=newsletter&utm_medium=email&utm_campaign=ES4324_Shipping" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Bolsas y embalajes<br />para comercio</a>
+					</td>
+					<td style="font-size:0; width:6px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:6px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.es/especial-embalaje-alimentario_cms_000141.html?utm_source=newsletter&utm_medium=email&utm_campaign=ES4324_Shipping" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Embalajes<br />alimentarios</a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td class="none" style="font-size:0; display:block; height:15px;">&nbsp;</td></tr>
+</table>
+<!--END MENU-->`
 
 
 
@@ -537,21 +587,68 @@ export let footerES = `<table class="resize" width="600" border="0" align="cente
 </tr>
 </table>`
 
-    export let headerUK = `<table class="resize" align="center" width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#276EF1" style="background:linear-gradient(45deg, #6121F5 0%, #276EF1 100%);">
-<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
-<tr>
-    <td class="resize" width="600" valign="center" align="center">
-        <table class="resize_w90" width="540" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td width="30%" align="left" valign="middle"><a href="https://www.rajapack.co.uk/" target="_blank"><img src="https://imgnews.raja-group.com/00-structure/header/UK-logo-raja-70-years.gif" width="160" height="52" style="display:block; padding:0; margin:0; border:0; width:160px; height:52px;" alt="RAJA"/></a></td>
-                <td width="62%" align="right" style="font-size:12px; font-weight:400; color:#FFFFFF;"><a href="<%@ include view='MirrorPageUrlUK' %>" style="font-size:12px; font-weight:400; color:#FFFFFF; text-decoration:none;">Online-Version</a></td>
-                <td width="8%" align="right"><a href="<%@ include view='MirrorPageUrlUK' %>"><img src="https://imgnews.raja-group.com/00-structure/header/picto-online.png" width="27" height="27" style="display:block; padding:0; margin:0; border:0; width:27px; height:27px;" alt=""/></a></td>
-            </tr>
-        </table>
-    </td>
-</tr>
-<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
-</table>`
+    export let headerUK = `<table class="resize" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#EDF1F7;">
+	<tr><td style="display:none; font-size:12px;">
+		Cross border or freight packaging - Available today
+		<span style="display:none;max-height:0px;overflow:hidden"> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌</span></td></tr>
+	<tr>
+		<td align="center">
+    
+    <!--HEADER 70 ans-->
+<table class="resize" align="center" width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#276EF1" style="background:linear-gradient(45deg, #6121F5 0%, #276EF1 100%);">
+	<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
+	<tr>
+		<td class="resize" width="600" valign="center" align="center">
+			<table class="resize_w90" width="540" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="30%" align="left" valign="middle"><a href="https://www.rajapack.co.uk/" target="_blank"><img src="https://imgnews.raja-group.com/00-structure/header/UK-logo-raja-70-years.gif" width="160" height="52" style="display:block; padding:0; margin:0; border:0; width:160px; height:52px;" alt="RAJA"/></a></td>
+					<td width="62%" align="right" style="font-size:12px; font-weight:400; color:#FFFFFF;"><a href="<%@ include view='MirrorPageUrlUK' %>" style="font-size:12px; font-weight:400; color:#FFFFFF; text-decoration:none;">Online-Version</a></td>
+					<td width="8%" align="right"><a href="<%@ include view='MirrorPageUrlUK' %>"><img src="https://imgnews.raja-group.com/00-structure/header/picto-online.png" width="27" height="27" style="display:block; padding:0; margin:0; border:0; width:27px; height:27px;" alt=""/></a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td style="font-size:0; display:block; height:3px;">&nbsp;</td></tr>
+</table>
+<!--END HEADER-->
+
+<!--MENU-->
+<table class="resize" width="600" border="0" cellspacing="0" cellpadding="0" style="color:#656F84; font-size:12px; background-color:#FFFFFF;">
+	<tr><td class="none" style="font-size:0; display:block; height:15px;">&nbsp;</td></tr>
+	<tr>
+		<td class="none" align="center">
+			<table class="resize_w96" border="0" cellspacing="0" cellpadding="0" style="color:#656F84; font-size:12px; background-color:#FFFFFF;">
+				<tr>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.co.uk/ecommerce-packaging_cms_000103.html" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">E-commerce<br>packaging</a>
+					</td>
+					<td style="font-size:0; width:18px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:18px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.co.uk/protective-packaging_C16.html" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Protective<br>packaging</a>
+					</td>
+					<td style="font-size:0; width:18px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:18px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.co.uk//rajapro_cms_000090.html" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Handling<br>and storage</a>
+					</td>
+					<td style="font-size:0; width:18px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:18px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.co.uk/office-supplies_C30.html" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Office<br>supplies</a>
+					</td>
+					<td style="font-size:0; width:18px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:18px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.co.uk/facilities-management_C28.html" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Health<br>and safety</a>
+					</td>
+					<td style="font-size:0; width:18px;">&nbsp;</td><td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td><td style="font-size:0; width:18px;">&nbsp;</td>
+					<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+						<a href="https://www.rajapack.co.uk/rajaboutique_cms_000007.html" target="_blank" style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Gift<br>packaging</a>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td class="none" style="font-size:0; display:block; height:15px;">&nbsp;</td></tr>
+</table>
+<!--END MENU-->`
 
 
 
@@ -1060,37 +1157,118 @@ export let footerES = `<table class="resize" width="600" border="0" align="cente
     </tr>
 </table>`
 
-    export let headerFR = `<table class="resize" align="center" width="600" border="0" cellspacing="0" cellpadding="0"
-                bgcolor="#276EF1" style="background:linear-gradient(45deg, #6121F5 0%, #276EF1 100%);">
-                <tr>
-                    <td style="font-size:0; display:block; height:3px;">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="resize" width="600" valign="center" align="center">
-                        <table class="resize_w90" width="540" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                                <td width="30%" align="left" valign="middle"><a href="https://www.raja.fr/"
-                                        target="_blank"><img
-                                            src="https://imgnews.raja-group.com/00-structure/header/FR-logo-raja-70-years.gif"
-                                            width="160" height="52"
-                                            style="display:block; padding:0; margin:0; border:0; width:160px; height:52px;"
-                                            alt="RAJA" /></a></td>
-                                <td width="62%" align="right"
-                                    style="font-size:12px; font-weight:400; color:#FFFFFF;">
-                                    <%@ include view='rajMirrorPageC' %>
-                                </td>
-                                <td width="8%" align="right"><img
-                                        src="https://imgnews.raja-group.com/00-structure/header/picto-online.png"
-                                        width="27" height="27"
-                                        style="display:block; padding:0; margin:0; border:0; width:27px; height:27px;"
-                                        alt="" /></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="font-size:0; display:block; height:3px;">&nbsp;</td>
-                </tr>
-            </table>`
+    export let headerFR = `<table class="resize" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#EDF1F7;">
+		<tr>
+			<td style="display:none; font-size:12px;">
+				Préparez la fin d'année
+				<span style="display:none;max-height:0px;overflow:hidden"> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+					‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌<wbr> ‌ ‌ ‌ ‌ ‌ ‌</span>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+
+				<!--HEADER-->
+				<table id="header" class="resize" align="center" width="600" border="0" cellspacing="0" cellpadding="0"
+					bgcolor="#276EF1" style="background:linear-gradient(45deg, #6121F5 0%, #276EF1 100%);">
+					<tr>
+						<td style="font-size:0; display:block; height:3px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="resize" width="600" valign="center" align="center">
+							<table class="resize_w90" width="540" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="30%" align="left" valign="middle"><a href="https://www.raja.fr/"
+											target="_blank"><img
+												src="https://imgnews.raja-group.com/00-structure/header/FR-logo-raja-70-years.gif"
+												width="160" height="52"
+												style="display:block; padding:0; margin:0; border:0; width:160px; height:52px;"
+												alt="RAJA" /></a></td>
+									<td width="62%" align="right"
+										style="font-size:12px; font-weight:400; color:#FFFFFF;">
+										<%@ include view='rajMirrorPageC' %>
+									</td>
+									<td width="8%" align="right"><img
+											src="https://imgnews.raja-group.com/00-structure/header/picto-online.png"
+											width="27" height="27"
+											style="display:block; padding:0; margin:0; border:0; width:27px; height:27px;"
+											alt="" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size:0; display:block; height:3px;">&nbsp;</td>
+					</tr>
+				</table>
+				<!--END HEADER-->
+
+				<!--MENU-->
+				<table class="resize" width="600" border="0" cellspacing="0" cellpadding="0"
+					style="color:#656F84; font-size:12px; background-color:#FFFFFF;">
+					<tr>
+						<td class="none" style="font-size:0; display:block; height:15px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="none" align="center">
+							<table class="resize_w96" border="0" cellspacing="0" cellpadding="0"
+								style="color:#656F84; font-size:12px; background-color:#FFFFFF;">
+								<tr>
+									<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+										<a href="https://www.raja.fr/emballer-proteger-expedier-ses-colis_cms_000073.html"
+											target="_blank"
+											style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Emballages<br>d’expédition</a>
+									</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+										<a href="https://www.raja.fr/rajapro_cms_000049.html" target="_blank"
+											style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Manutention<br>et
+											stockage</a>
+									</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+										<a href="https://www.raja.fr/special-fournitures-bureau_cms_000175.html"
+											target="_blank"
+											style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Fournitures<br>de
+											bureau</a>
+									</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+										<a href="https://www.raja.fr/special-hygiene-entretien-securite_cms_000131.html"
+											target="_blank"
+											style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Hygiène<br>et
+											sécurité</a>
+									</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+										<a href="https://www.raja.fr/emballages-boutique_cms_000074.html"
+											target="_blank"
+											style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Sacs
+											et emballages<br>cadeau</a>
+									</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td width="1" style="font-size:0; background-color:#D7DAE0;">&nbsp;</td>
+									<td style="font-size:0; width:10px;">&nbsp;</td>
+									<td align="center" style="font-size:12px; font-weight:normal; color:#656F84;">
+										<a href="https://www.raja.fr/rajafood_cms_000090.html" target="_blank"
+											style="font-size:12px; font-weight:normal; color:#656F84; text-decoration:none;">Emballages<br>alimentaires</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="none" style="font-size:0; display:block; height:15px;">&nbsp;</td>
+					</tr>
+				</table>
+				<!--END MENU-->`
 
             
