@@ -1,5 +1,5 @@
 // Import header and footer variables for each country
-import { headerES, footerES, headerFR, footerFR, headerUK, footerUK } from "./var.js";
+import { headerES, footerES, headerFR, footerFR, headerUK, footerUK, headerAT, footerAT, headerBFL, footerBFL, headerBFR, footerBFR, headerCDE, footerCDE, headerCFR, footerCFR, headerCZ, footerCZ, headerDE, footerDE, headerDK, footerDK, headerHU, footerHU, headerIT, footerIT, headerNL, footerNL, headerNO, footerNO, headerPL, footerPL, headerPT, footerPT, headerSE, footerSE, headerSK, footerSK } from "./var.js";
 
 // Retrieve each button used to create forms
 const oneProductButton = document.getElementById("oneproduct");
@@ -448,6 +448,70 @@ document.addEventListener('DOMContentLoaded', () => {
             header = headerUK;
             footer = footerUK;
             break;
+		case 'at':
+			header = headerAT;
+			footer = footerAT;
+			break;
+		case 'bfl':
+			header = headerBFL;
+			footer = footerBFL;
+			break;
+		case 'bfr':
+			header = headerBFR;
+			footer = footerBFR;
+			break;
+		case 'cde':
+			header = headerCDE;
+			footer = footerCDE;
+			break;
+		case 'cfr':
+			header = headerCFR;
+			footer = footerCFR;
+			break;
+		case 'cz':
+			header = headerCZ;
+			footer = footerCZ;
+			break;
+		case 'de':
+			header = headerDE;
+			footer = footerDE;
+			break;
+		case 'dk':
+			header = headerDK;
+			footer = footerDK;
+			break;
+		case 'hu':
+			header = headerHU;
+			footer = footerHU;
+			break;
+		case 'it':
+			header = headerIT;
+			footer = footerIT;
+			break;
+		case 'nl':
+			header = headerNL;
+			footer = footerNL;
+			break;
+		case 'no':
+			header = headerNO;
+			footer = footerNO;
+			break;
+		case 'pl':
+			header = headerPL;
+			footer = footerPL;
+			break;
+		case 'pt':
+			header = headerPT;
+			footer = footerPT;
+			break;
+		case 'se':
+			header = headerSE;
+			footer = footerSE;
+			break;
+		case 'sk':
+			header = headerSK;
+			footer = footerSK;
+			break;
         default:
             header = headerUK; // Default value
             footer = footerUK;
@@ -490,6 +554,70 @@ function generateHTMLDocument() {
             header = headerUK;
             footer = footerUK;
             break;
+		case 'at':
+			header = headerAT;
+			footer = footerAT;
+			break;
+		case 'bfl':
+			header = headerBFL;
+			footer = footerBFL;
+			break;
+		case 'bfr':
+			header = headerBFR;
+			footer = footerBFR;
+			break;
+		case 'cde':
+			header = headerCDE;
+			footer = footerCDE;
+			break;
+		case 'cfr':
+			header = headerCFR;
+			footer = footerCFR;
+			break;
+		case 'cz':
+			header = headerCZ;
+			footer = footerCZ;
+			break;
+		case 'de':
+			header = headerDE;
+			footer = footerDE;
+			break;
+		case 'dk':
+			header = headerDK;
+			footer = footerDK;
+			break;
+		case 'hu':
+			header = headerHU;
+			footer = footerHU;
+			break;
+		case 'it':
+			header = headerIT;
+			footer = footerIT;
+			break;
+		case 'nl':
+			header = headerNL;
+			footer = footerNL;
+			break;
+		case 'no':
+			header = headerNO;
+			footer = footerNO;
+			break;
+		case 'pl':
+			header = headerPL;
+			footer = footerPL;
+			break;
+		case 'pt':
+			header = headerPT;
+			footer = footerPT;
+			break;
+		case 'se':
+			header = headerSE;
+			footer = footerSE;
+			break;
+		case 'sk':
+			header = headerSK;
+			footer = footerSK;
+			break;
         default:
             header = headerUK; // Default value
             footer = footerUK;
