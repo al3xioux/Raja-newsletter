@@ -2,6 +2,7 @@
 import { headerES, footerES, headerFR, footerFR, headerUK, footerUK } from "./var.js";
 
 // Retrieve each button used to create forms
+const oneProductButton = document.getElementById("oneproduct");
 const productButton = document.getElementById("product");
 const titleButton = document.getElementById("title");
 const bannerButton = document.getElementById("banner");
@@ -35,6 +36,94 @@ submitButton.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent page reload
     localStorage.setItem('formData', JSON.stringify(formEntries));
 });
+
+function createOneProductElement() {
+    order++;
+    productCount++;
+    const currentCounter = productCount;
+
+    const newProductSection = document.createElement('section');
+    newProductSection.className = "product-group";
+    newProductSection.id = `product-group-${currentCounter}`;
+
+    newProductSection.innerHTML = `
+        <form class="form-product">
+            <section class="product-line">
+                <label for="one_productLink${currentCounter}">Product Link (id: ${currentCounter})</label>
+                <input type="text" id="one_productLink${currentCounter}" name="one_productLink${currentCounter}"><br>
+
+                <label for="one_image${currentCounter}">Image (id: ${currentCounter})</label>
+                <input type="text" id="one_image${currentCounter}" name="one_image${currentCounter}"><br>
+
+                <label for="one_environmentalBadge${currentCounter}">Environmental Badge (id: ${currentCounter})</label>
+                <input type="text" id="one_environmentalBadge${currentCounter}" name="one_environmentalBadge${currentCounter}">
+                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/crit-green/_crit-green-all-pays.html', '_blank')">Environmentally-friendly badge</button>
+                <br>
+
+                <label for="one_title${currentCounter}">Title (id: ${currentCounter})</label>
+                <input type="text" id="one_title${currentCounter}" name="one_title${currentCounter}"><br>
+
+                <label for="one_desc${currentCounter}">Description (id: ${currentCounter})</label>
+                <input type="text" id="one_desc${currentCounter}" name="one_desc${currentCounter}"><br>
+
+                <label for="one_marketingBadge${currentCounter}">Marketing Badge (id: ${currentCounter})</label>
+                <input type="text" id="one_marketingBadge${currentCounter}" name="one_marketingBadge${currentCounter}">
+                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/label/_label-all-pays.html', '_blank')">Marketing badge</button>
+                <br>
+
+                <label for="one_startingFrom${currentCounter}">Starting from (id: ${currentCounter})</label>
+                <select id="one_startingFrom${currentCounter}" name="one_startingFrom${currentCounter}">
+                    <option value="">Select</option>
+                    <option value="Starting from">Yes</option>
+                    <option value="">No</option>
+                </select><br>
+
+                <label for="one_price${currentCounter}">Price (id: ${currentCounter})</label>
+                <input type="text" id="one_price${currentCounter}" name="one_price${currentCounter}"><br>
+
+                <label for="one_unit${currentCounter}">Unit (id: ${currentCounter})</label>
+                <input type="text" id="one_unit${currentCounter}" name="one_unit${currentCounter}"><br>
+            </section>
+        </form>`;
+
+    contentContainer.appendChild(newProductSection);
+
+    const productData = {
+        one_productLink: '',
+        one_image: '',
+        one_environmentalBadge: '',
+        one_title: '',
+        one_desc: '',
+        one_marketingBadge: '',
+        one_startingFrom: '',
+        one_price: '',
+        one_unit: ''
+    };
+
+    // Query the elements
+    const productLinkInput = newProductSection.querySelector(`#one_productLink${currentCounter}`);
+    const imageInput = newProductSection.querySelector(`#one_image${currentCounter}`);
+    const environmentalBadgeInput = newProductSection.querySelector(`#one_environmentalBadge${currentCounter}`);
+    const titleInput = newProductSection.querySelector(`#one_title${currentCounter}`);
+    const descInput = newProductSection.querySelector(`#one_desc${currentCounter}`);
+    const marketingBadgeInput = newProductSection.querySelector(`#one_marketingBadge${currentCounter}`);
+    const startingFromSelect = newProductSection.querySelector(`#one_startingFrom${currentCounter}`);
+    const priceInput = newProductSection.querySelector(`#one_price${currentCounter}`);
+    const unitInput = newProductSection.querySelector(`#one_unit${currentCounter}`);
+
+    // Add event listeners to update productData
+    productLinkInput.addEventListener('input', () => { productData.one_productLink = productLinkInput.value; });
+    imageInput.addEventListener('input', () => { productData.one_image = imageInput.value; });
+    environmentalBadgeInput.addEventListener('input', () => { productData.one_environmentalBadge = environmentalBadgeInput.value; });
+    titleInput.addEventListener('input', () => { productData.one_title = titleInput.value; });
+    descInput.addEventListener('input', () => { productData.one_desc = descInput.value; });
+    marketingBadgeInput.addEventListener('input', () => { productData.one_marketingBadge = marketingBadgeInput.value; });
+    startingFromSelect.addEventListener('change', () => { productData.one_startingFrom = startingFromSelect.value; });
+    priceInput.addEventListener('input', () => { productData.one_price = priceInput.value; });
+    unitInput.addEventListener('input', () => { productData.one_unit = unitInput.value; });
+
+    formEntries.push({ order: order, type: 'oneProduct', data: productData });
+}
 
 // Function to create a product element
 function createProductElement() {
@@ -307,6 +396,11 @@ productButton.addEventListener('click', function(event) {
     createProductElement();
 });
 
+oneProductButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    createOneProductElement();
+});
+
 // Event listener for adding a large title
 titleButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -355,8 +449,8 @@ document.addEventListener('DOMContentLoaded', () => {
             footer = footerUK;
             break;
         default:
-            header = headerFR; // Default value
-            footer = footerFR;
+            header = headerUK; // Default value
+            footer = footerUK;
     }
 });
 
@@ -397,8 +491,8 @@ function generateHTMLDocument() {
             footer = footerUK;
             break;
         default:
-            header = headerFR; // Default value
-            footer = footerFR;
+            header = headerUK; // Default value
+            footer = footerUK;
     }
 
     // Start constructing the HTML
@@ -713,8 +807,93 @@ img { -ms-interpolation-mode: bicubic; border:0; display:block!important; }
         .sort((a, b) => a.order - b.order)
         .forEach((item) => {
             switch (item.type) {
+				// Product block
+				case 'oneProduct':
+					htmlContent += `
+					<!--07 BIG PDT - div-->
+
+<table class="resize" width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="max-width:600px; background-color:#FFFFFF;">
+	<tr>
+		<td dir="ltr" style="text-align:center; vertical-align:top; font-size:0; background-color:#FFFFFF;">
+			<!--[if (gte mso 9)|(IE)]>
+			<table dir="ltr" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="50%" dir="ltr">
+			<![endif]-->
+			<div class="resize" dir="ltr" style="width:50%; display:inline-block; vertical-align:top;">
+				<table class="resize" align="left" width="300" border="0" cellspacing="0" cellpadding="0" style="text-align: center; background-color:#FFFFFF;">
+					<tr><td style="font-size:0; display:block; height:20px;">&nbsp;</td></tr>
+					<tr>
+						<td>
+							<table class="resize" width="298" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF;">
+								<tr>
+									<td style="font-size:0;"><a href="${item.data.one_productLink}" target="_blank"><img class="resize_w90" src="${item.data.one_image}" width="297" height="272" style="display:block; padding:0; margin:0 auto; border:0; width:297px; height:272px;" alt="Boîte ronde en carton RAJA"/></a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr><td class="none" style="font-size:0; display:block; height:10px;">&nbsp;</td></tr>
+				</table>
+			</div>
+			<!--[if (gte mso 9)|(IE)]>
+					</td>
+					<td width="50%" dir="ltr">
+			<![endif]-->
+			<div class="resize" dir="ltr" style="width:50%; display:inline-block; vertical-align:top; text-align: center;">
+				<table class="resize" align="right" width="300" border="0" cellspacing="0" cellpadding="0" style="text-align: center; background-color:#FFFFFF;">
+					<tr><td class="resize_h20" style="font-size:0; display:block; height:20px;">&nbsp;</td></tr>
+					<tr>
+						<td>
+							<table class="resize_w90" width="268" border="0" align="center" valign="top" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF;">
+								<!--CRIT GREEN-->
+								<tr>
+									<td><a href="${item.data.one_productLink}" target="_blank"><img class="resize_h40" src="${item.data.one_environmentalBadge}" height="30" width="197" alt="Recyclable" style="display:block; padding:0; margin:0; border:0; height:30px; width:197px;"></a></td>
+								</tr>
+								<tr><td style="font-size:0; display:block; height:5px;">&nbsp;</td></tr>
+								<!--END CRIT GREEN-->
+								<tr>
+									<td align="left" style="font-weight:800; font-size:16px; color:#393E46;"><a class="resize_text20" href="${item.data.one_productLink}" target="_blank" style="color:#393E46; text-decoration:none;">${item.data.one_title}</a></td>
+								</tr>
+								<tr><td style="font-size:0; display:block; height:10px;">&nbsp;</td></tr>
+								<tr>
+									<td align="left" style="font-size:14px; color:#656F84;"><a class="resize_text18" href="${item.data.one_productLink}" target="_blank" style="color:#656F84; text-decoration:none;">${item.data.one_desc}</a>
+									</td>
+								</tr>
+								<tr><td style="font-size:0; display:block; height:20px;">&nbsp;</td></tr>
+								<!--LABEL-->
+								<tr>
+									<td align="left" style="font-size:0; display:block;"><a href="${item.data.one_productLink}" target="_blank"><img class="resize" src="${item.data.one_marketingBadge}" height="26" width="268" alt="OFFRE SPÉCIALE" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;"></a></td>
+								</tr>
+								<!--END LABEL-->
+								<tr><td style="font-size:0; display:block; height:10px;">&nbsp;</td></tr>
+								<tr>
+									<td align="left" style="font-size:14px; color:#FE9600;"><a class="resize_text16" href="${item.data.one_productLink}" target="_blank" style="color:#FE9600; text-decoration:none;"> ${item.data.one_startingFrom}<br>
+										<span class="resize_text30" style="font-size:20px; font-weight:800; color:#FE9600; text-decoration:none;">&nbsp;${item.data.one_price}</span>&nbsp;<br>
+										${item.data.one_unit}</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr><td class="resize_h30" style="font-size:0; display:block; height:20px;">&nbsp;</td></tr>
+				</table>
+			</div>
+			<!--[if (gte mso 9)|(IE)]>
+					</td>
+				</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+	<tr><td style="display:block; font-size:0; height:15px;">&nbsp;</td></tr>
+	
+	<tr><td style="display:block; font-size:0; background-color:#EDF1F7; height:2px;">&nbsp;</td></tr>
+	<tr><td style="display:block; font-size:0; height:15px; background-color:#FFFFFF;">&nbsp;</td></tr>
+</table>
+<!--END 07 BIG PDT - div-->	`
+break;
+
                 case 'product':
-                    // ... product block ...
                     htmlContent += `
                     <!--L1-div-->
 				<table class="resize" width="600" border="0" align="center" cellpadding="0" cellspacing="0"
