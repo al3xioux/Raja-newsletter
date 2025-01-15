@@ -50,76 +50,76 @@ function createProductElement() {
         <form class="form-product">
             <section class="product-line">
                 <label for="productLink${currentCounter}">Product Link (id: ${currentCounter})</label>
-                <input type="text" id="productLink${currentCounter}" name="productLink${currentCounter}"><br><br>
+                <input type="text" id="productLink${currentCounter}" name="productLink${currentCounter}"><br>
 
                 <label for="image${currentCounter}">Image (id: ${currentCounter})</label>
-                <input type="text" id="image${currentCounter}" name="image${currentCounter}"><br><br>
+                <input type="text" id="image${currentCounter}" name="image${currentCounter}"><br>
 
                 <label for="environmentalBadge${currentCounter}">Environmental Badge (id: ${currentCounter})</label>
                 <input type="text" id="environmentalBadge${currentCounter}" name="environmentalBadge${currentCounter}">
                 <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/crit-green/_crit-green-all-pays.html', '_blank')">Environmentally-friendly badge</button>
-                <br><br>
+                <br>
 
                 <label for="title${currentCounter}">Title (id: ${currentCounter})</label>
-                <input type="text" id="title${currentCounter}" name="title${currentCounter}"><br><br>
+                <input type="text" id="title${currentCounter}" name="title${currentCounter}"><br>
 
                 <label for="desc${currentCounter}">Description (id: ${currentCounter})</label>
-                <input type="text" id="desc${currentCounter}" name="desc${currentCounter}"><br><br>
+                <input type="text" id="desc${currentCounter}" name="desc${currentCounter}"><br>
 
                 <label for="marketingBadge${currentCounter}">Marketing Badge (id: ${currentCounter})</label>
                 <input type="text" id="marketingBadge${currentCounter}" name="marketingBadge${currentCounter}">
                 <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/label/_label-all-pays.html', '_blank')">Marketing badge</button>
-                <br><br>
+                <br>
 
                 <label for="startingFrom${currentCounter}">Starting from (id: ${currentCounter})</label>
                 <select id="startingFrom${currentCounter}" name="startingFrom${currentCounter}">
                     <option value="">Select</option>
                     <option value="Starting from">Yes</option>
                     <option value="">No</option>
-                </select><br><br>
+                </select><br>
 
                 <label for="price${currentCounter}">Price (id: ${currentCounter})</label>
-                <input type="text" id="price${currentCounter}" name="price${currentCounter}"><br><br>
+                <input type="text" id="price${currentCounter}" name="price${currentCounter}"><br>
 
                 <label for="unit${currentCounter}">Unit (id: ${currentCounter})</label>
-                <input type="text" id="unit${currentCounter}" name="unit${currentCounter}"><br><br>
+                <input type="text" id="unit${currentCounter}" name="unit${currentCounter}"><br>
             </section>
 
             <section class="product-line">
                 <label for="productLink${currentCounter + 1}">Product Link (id: ${currentCounter + 1})</label>
-                <input type="text" id="productLink${currentCounter + 1}" name="productLink${currentCounter + 1}"><br><br>
+                <input type="text" id="productLink${currentCounter + 1}" name="productLink${currentCounter + 1}"><br>
 
                 <label for="image${currentCounter + 1}">Image (id: ${currentCounter + 1})</label>
-                <input type="text" id="image${currentCounter + 1}" name="image${currentCounter + 1}"><br><br>
+                <input type="text" id="image${currentCounter + 1}" name="image${currentCounter + 1}"><br>
 
                 <label for="environmentalBadge${currentCounter + 1}">Environmental Badge (id: ${currentCounter + 1})</label>
                 <input type="text" id="environmentalBadge${currentCounter + 1}" name="environmentalBadge${currentCounter + 1}">
                 <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/crit-green/_crit-green-all-pays.html', '_blank')">Environmentally-friendly badge</button>
-                <br><br>
+                <br>
 
                 <label for="title${currentCounter + 1}">Title (id: ${currentCounter + 1})</label>
-                <input type="text" id="title${currentCounter + 1}" name="title${currentCounter + 1}"><br><br>
+                <input type="text" id="title${currentCounter + 1}" name="title${currentCounter + 1}"><br>
 
                 <label for="desc${currentCounter + 1}">Description (id: ${currentCounter + 1})</label>
-                <input type="text" id="desc${currentCounter + 1}" name="desc${currentCounter + 1}"><br><br>
+                <input type="text" id="desc${currentCounter + 1}" name="desc${currentCounter + 1}"><br>
 
                 <label for="marketingBadge${currentCounter + 1}">Marketing Badge (id: ${currentCounter + 1})</label>
                 <input type="text" id="marketingBadge${currentCounter + 1}" name="marketingBadge${currentCounter + 1}">
                 <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/label/_label-all-pays.html', '_blank')">Marketing badge</button>
-                <br><br>
+                <br>
 
                 <label for="startingFrom${currentCounter + 1}">Starting from (id: ${currentCounter + 1})</label>
                 <select id="startingFrom${currentCounter + 1}" name="startingFrom${currentCounter + 1}">
                     <option value="">Select</option>
                     <option value="Starting from">Yes</option>
                     <option value="">No</option>
-                </select><br><br>
+                </select><br>
 
                 <label for="price${currentCounter + 1}">Price (id: ${currentCounter + 1})</label>
-                <input type="text" id="price${currentCounter + 1}" name="price${currentCounter + 1}"><br><br>
+                <input type="text" id="price${currentCounter + 1}" name="price${currentCounter + 1}"><br>
 
                 <label for="unit${currentCounter + 1}">Unit (id: ${currentCounter + 1})</label>
-                <input type="text" id="unit${currentCounter + 1}" name="unit${currentCounter + 1}"><br><br>
+                <input type="text" id="unit${currentCounter + 1}" name="unit${currentCounter + 1}"><br>
             </section>
         </form>`;
 
