@@ -135,8 +135,8 @@ function createOneProductElement() {
 // Function to create a product element
 function createProductElement() {
 	order++;
-	productCount++;
-	const currentCounter = productCount; // Save current counter
+	productCount += 2; // Increment by 2 since two products are created
+	const currentCounter = productCount - 1; // Adjust to get the correct starting number
 
 	const newProductSection = document.createElement('section');
 	newProductSection.className = "product-group";
@@ -190,7 +190,7 @@ function createProductElement() {
 
                 <label for="ecolabel${currentCounter + 1}">Eco-Label N°${currentCounter + 1}</label>
                 <input type="text" id="ecolabel${currentCounter + 1}" name="ecolabel${currentCounter + 1}">
-                <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Environmentally-friendly badge</button>
+                <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
                 <br>
 
                 <label for="title${currentCounter + 1}">Title N°${currentCounter + 1}</label>
