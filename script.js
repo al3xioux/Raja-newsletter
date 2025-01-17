@@ -38,91 +38,91 @@ submitButton.addEventListener('click', function (event) {
 });
 
 function createOneProductElement() {
-	order++;
-	productCount++;
-	const currentCounter = productCount;
+    order++;
+    productCount++;
+    const currentCounter = productCount;
 
-	const newProductSection = document.createElement('section');
-	newProductSection.className = "product-group";
-	newProductSection.id = `product-group-${currentCounter}`;
+    const newProductSection = document.createElement('section');
+    newProductSection.className = "product-group";
+    newProductSection.id = `product-group-${currentCounter}`;
 
-	newProductSection.innerHTML = `
+    newProductSection.innerHTML = `
         <form class="form-product">
             <section class="product-line">
-                <label for="one_productLink${currentCounter}">Product Link (id: ${currentCounter})</label>
+                <label for="one_productLink${currentCounter}">Product Link N°${currentCounter}</label>
                 <input type="text" id="one_productLink${currentCounter}" name="one_productLink${currentCounter}"><br>
 
-                <label for="one_image${currentCounter}">Image (id: ${currentCounter})</label>
+                <label for="one_image${currentCounter}">Image N°${currentCounter}</label>
                 <input type="text" id="one_image${currentCounter}" name="one_image${currentCounter}"><br>
 
-                <label for="one_ecolabel${currentCounter}">Eco-Label (id: ${currentCounter})</label>
-                <input type="text" id="one_ecolabel${currentCounter}" name="one_ecolabel${currentCounter}">
-                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/crit-green/_crit-green-all-pays.html', '_blank')">Eco-Label</button>
+                <label for="one_ecolabel${currentCounter}">Eco-Label N°${currentCounter}</label>
+                <input type="text" id="one_ecolabel${currentCounter}" name="one_ecolabel${currentCounter}" >
+                <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
                 <br>
 
-                <label for="one_title${currentCounter}">Title (id: ${currentCounter})</label>
+                <label for="one_title${currentCounter}">Title N°${currentCounter}</label>
                 <input type="text" id="one_title${currentCounter}" name="one_title${currentCounter}" maxlength="50"><br>
 
-                <label for="one_text${currentCounter}">Text (id: ${currentCounter})</label>
+                <label for="one_text${currentCounter}">Text N°${currentCounter}</label>
                 <input type="text" id="one_text${currentCounter}" name="one_text${currentCounter}" maxlength="150"><br>
 
-                <label for="one_label${currentCounter}">Label (id: ${currentCounter})</label>
+                <label for="one_label${currentCounter}">Label N°${currentCounter}</label>
                 <input type="text" id="one_label${currentCounter}" name="one_label${currentCounter}">
-                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/label/_label-all-pays.html', '_blank')">Label</button>
+                <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
                 <br>
 
-                <label for="one_priceOf${currentCounter}">Price of (id: ${currentCounter})</label>
+                <label for="one_priceOf${currentCounter}">Price of N°${currentCounter}</label>
                 <select id="one_priceOf${currentCounter}" name="one_priceOf${currentCounter}">
                     <option value="">Select</option>
                     <option value="From">Yes</option>
                     <option value="">No</option>
                 </select><br>
 
-                <label for="one_price${currentCounter}">Price (id: ${currentCounter})</label>
+                <label for="one_price${currentCounter}">Price N°${currentCounter}</label>
                 <input type="text" id="one_price${currentCounter}" name="one_price${currentCounter}"><br>
 
-                <label for="one_unit${currentCounter}">Unit (id: ${currentCounter})</label>
+                <label for="one_unit${currentCounter}">Unit N°${currentCounter}</label>
                 <input type="text" id="one_unit${currentCounter}" name="one_unit${currentCounter}"><br>
             </section>
         </form>`;
 
-	contentContainer.appendChild(newProductSection);
+    contentContainer.appendChild(newProductSection);
 
-	const productData = {
-		one_productLink: '',
-		one_image: '',
-		one_ecolabel: '',
-		one_title: '',
-		one_text: '',
-		one_label: '',
-		one_priceOf: '',
-		one_price: '',
-		one_unit: ''
-	};
+    const productData = {
+        one_productLink: '',
+        one_image: '',
+        one_ecolabel: '',
+        one_title: '',
+        one_text: '',
+        one_label: '',
+        one_priceOf: '',
+        one_price: '',
+        one_unit: ''
+    };
 
-	// Query the elements
-	const productLinkInput = newProductSection.querySelector(`#one_productLink${currentCounter}`);
-	const imageInput = newProductSection.querySelector(`#one_image${currentCounter}`);
-	const ecolabelInput = newProductSection.querySelector(`#one_ecolabel${currentCounter}`);
-	const titleInput = newProductSection.querySelector(`#one_title${currentCounter}`);
-	const textInput = newProductSection.querySelector(`#one_text${currentCounter}`);
-	const labelInput = newProductSection.querySelector(`#one_label${currentCounter}`);
-	const priceOfInput = newProductSection.querySelector(`#one_priceOf${currentCounter}`);
-	const priceInput = newProductSection.querySelector(`#one_price${currentCounter}`);
-	const unitInput = newProductSection.querySelector(`#one_unit${currentCounter}`);
+    // Query the elements
+    const productLinkInput = newProductSection.querySelector(`#one_productLink${currentCounter}`);
+    const imageInput = newProductSection.querySelector(`#one_image${currentCounter}`);
+    const ecolabelInput = newProductSection.querySelector(`#one_ecolabel${currentCounter}`);
+    const titleInput = newProductSection.querySelector(`#one_title${currentCounter}`);
+    const textInput = newProductSection.querySelector(`#one_text${currentCounter}`);
+    const labelInput = newProductSection.querySelector(`#one_label${currentCounter}`);
+    const priceOfInput = newProductSection.querySelector(`#one_priceOf${currentCounter}`);
+    const priceInput = newProductSection.querySelector(`#one_price${currentCounter}`);
+    const unitInput = newProductSection.querySelector(`#one_unit${currentCounter}`);
 
-	// Add event listeners to update productData
-	productLinkInput.addEventListener('input', () => { productData.one_productLink = productLinkInput.value; });
-	imageInput.addEventListener('input', () => { productData.one_image = imageInput.value; });
+    // Add event listeners to update productData
+    productLinkInput.addEventListener('input', () => { productData.one_productLink = productLinkInput.value; });
+    imageInput.addEventListener('input', () => { productData.one_image = imageInput.value; });
 	ecolabelInput.addEventListener('input', () => { productData.one_ecolabel = ecolabelInput.value; });
-	titleInput.addEventListener('input', () => { productData.one_title = titleInput.value; });
-	textInput.addEventListener('input', () => { productData.one_text = textInput.value; });
-	labelInput.addEventListener('input', () => { productData.one_label = labelInput.value; });
-	priceOfInput.addEventListener('change', () => { productData.one_priceOf = priceOfInput.value; });
-	priceInput.addEventListener('input', () => { productData.one_price = priceInput.value; });
-	unitInput.addEventListener('input', () => { productData.one_unit = unitInput.value; });
+    titleInput.addEventListener('input', () => { productData.one_title = titleInput.value; });
+    textInput.addEventListener('input', () => { productData.one_text = textInput.value; });
+    labelInput.addEventListener('input', () => { productData.one_label = labelInput.value; });
+    priceOfInput.addEventListener('change', () => { productData.one_priceOf = priceOfInput.value; });
+    priceInput.addEventListener('input', () => { productData.one_price = priceInput.value; });
+    unitInput.addEventListener('input', () => { productData.one_unit = unitInput.value; });
 
-	formEntries.push({ order: order, type: 'oneProduct', data: productData });
+    formEntries.push({ order: order, type: 'oneProduct', data: productData });
 }
 
 // Function to create a product element
@@ -138,76 +138,76 @@ function createProductElement() {
 	newProductSection.innerHTML = `
         <form class="form-product">
             <section class="product-line">
-                <label for="productLink${currentCounter}">Product Link (id: ${currentCounter})</label>
+                <label for="productLink${currentCounter}">Product Link N°${currentCounter}</label>
                 <input type="text" id="productLink${currentCounter}" name="productLink${currentCounter}"><br>
 
-                <label for="image${currentCounter}">Image (id: ${currentCounter})</label>
+                <label for="image${currentCounter}">Image N°${currentCounter}</label>
                 <input type="text" id="image${currentCounter}" name="image${currentCounter}"><br>
 
-                <label for="ecolabel${currentCounter}">Eco-Label (id: ${currentCounter})</label>
+                <label for="ecolabel${currentCounter}">Eco-Label N°${currentCounter}</label>
                 <input type="text" id="ecolabel${currentCounter}" name="ecolabel${currentCounter}">
-                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/crit-green/_crit-green-all-pays.html', '_blank')">Eco-Label</button>
+                <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
                 <br>
 
-                <label for="title${currentCounter}">Title (id: ${currentCounter})</label>
+                <label for="title${currentCounter}">Title N°${currentCounter}</label>
                 <input type="text" id="title${currentCounter}" name="title${currentCounter}" maxlength="50"><br>
 
-                <label for="text${currentCounter}">Text (id: ${currentCounter})</label>
+                <label for="text${currentCounter}">Text N°${currentCounter}</label>
                 <input type="text" id="text${currentCounter}" name="text${currentCounter}" maxlength="60"><br>
 
-                <label for="label${currentCounter}">Label (id: ${currentCounter})</label>
+                <label for="label${currentCounter}">Label N°${currentCounter}</label>
                 <input type="text" id="label${currentCounter}" name="label${currentCounter}">
-                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/label/_label-all-pays.html', '_blank')">Label</button>
+                <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
                 <br>
 
-                <label for="priceOf${currentCounter}">Price of (id: ${currentCounter})</label>
+                <label for="priceOf${currentCounter}">Price of N°${currentCounter}</label>
                 <select id="priceOf${currentCounter}" name="priceOf${currentCounter}">
                     <option value="">Select</option>
                     <option value="From">Yes</option>
                     <option value="">No</option>
                 </select><br>
 
-                <label for="price${currentCounter}">Price (id: ${currentCounter})</label>
+                <label for="price${currentCounter}">Price N°${currentCounter}</label>
                 <input type="text" id="price${currentCounter}" name="price${currentCounter}"><br>
 
-                <label for="unit${currentCounter}">Unit (id: ${currentCounter})</label>
+                <label for="unit${currentCounter}">Unit N°${currentCounter}</label>
                 <input type="text" id="unit${currentCounter}" name="unit${currentCounter}"><br>
             </section>
 
             <section class="product-line">
-                <label for="productLink${currentCounter + 1}">Product Link (id: ${currentCounter + 1})</label>
+                <label for="productLink${currentCounter + 1}">Product Link N°${currentCounter + 1}</label>
                 <input type="text" id="productLink${currentCounter + 1}" name="productLink${currentCounter + 1}"><br>
 
-                <label for="image${currentCounter + 1}">Image (id: ${currentCounter + 1})</label>
+                <label for="image${currentCounter + 1}">Image N°${currentCounter + 1}</label>
                 <input type="text" id="image${currentCounter + 1}" name="image${currentCounter + 1}"><br>
 
-                <label for="ecolabel${currentCounter + 1}">Eco-Label (id: ${currentCounter + 1})</label>
+                <label for="ecolabel${currentCounter + 1}">Eco-Label N°${currentCounter + 1}</label>
                 <input type="text" id="ecolabel${currentCounter + 1}" name="ecolabel${currentCounter + 1}">
-                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/crit-green/_crit-green-all-pays.html', '_blank')">Environmentally-friendly badge</button>
+                <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Environmentally-friendly badge</button>
                 <br>
 
-                <label for="title${currentCounter + 1}">Title (id: ${currentCounter + 1})</label>
+                <label for="title${currentCounter + 1}">Title N°${currentCounter + 1}</label>
                 <input type="text" id="title${currentCounter + 1}" name="title${currentCounter + 1}" maxlength="50"><br>
 
-                <label for="text${currentCounter + 1}">Text (id: ${currentCounter + 1})</label>
+                <label for="text${currentCounter + 1}">Text N°${currentCounter + 1}</label>
                 <input type="text" id="text${currentCounter + 1}" name="text${currentCounter + 1}" maxlength="60"><br>
 
-                <label for="label${currentCounter + 1}">Label (id: ${currentCounter + 1})</label>
+                <label for="label${currentCounter + 1}">Label N°${currentCounter + 1}</label>
                 <input type="text" id="label${currentCounter + 1}" name="label${currentCounter + 1}">
-                <button type="button" onclick="window.open('https://imgnews.raja-group.com/00-structure/label/_label-all-pays.html', '_blank')">Label</button>
+                <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
                 <br>
 
-                <label for="priceOf${currentCounter + 1}">Price of (id: ${currentCounter + 1})</label>
+                <label for="priceOf${currentCounter + 1}">Price of N°${currentCounter + 1}</label>
                 <select id="priceOf${currentCounter + 1}" name="priceOf${currentCounter + 1}">
                     <option value="">Select</option>
                     <option value="From">Yes</option>
                     <option value="">No</option>
                 </select><br>
 
-                <label for="price${currentCounter + 1}">Price (id: ${currentCounter + 1})</label>
+                <label for="price${currentCounter + 1}">Price N°${currentCounter + 1}</label>
                 <input type="text" id="price${currentCounter + 1}" name="price${currentCounter + 1}"><br>
 
-                <label for="unit${currentCounter + 1}">Unit (id: ${currentCounter + 1})</label>
+                <label for="unit${currentCounter + 1}">Unit N°${currentCounter + 1}</label>
                 <input type="text" id="unit${currentCounter + 1}" name="unit${currentCounter + 1}"><br>
             </section>
         </form>`;
@@ -217,17 +217,17 @@ function createProductElement() {
 
 	// Initialize productData object
 	const productData = {
-		ecolabel1: '',
+		ecolabel1: 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png',
+		label1: 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png',
+		ecolabel2: 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png',
+		label2: 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png',
 		title1: '',
 		text1: '',
-		label1: '',
 		priceOf1: '',
 		price1: '',
 		unit1: '',
-		ecolabel2: '',
 		title2: '',
 		text2: '',
-		label2: '',
 		priceOf2: '',
 		price2: '',
 		unit2: '',
@@ -258,15 +258,23 @@ function createProductElement() {
 	const img2 = newProductSection.querySelector(`#image${currentCounter + 1}`);
 
 	// Ensure elements are not null before adding event listeners
-	if (ecolabel1) ecolabel1.addEventListener('change', () => { productData.ecolabel1 = ecolabel1.value; });
+	if (ecolabel1) ecolabel1.addEventListener('change', () => {
+		productData.ecolabel1 = ecolabel1.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+	});
 	if (title1) title1.addEventListener('input', () => { productData.title1 = title1.value; });
 	if (text1) text1.addEventListener('input', () => { productData.text1 = text1.value; });
-	if (label1) label1.addEventListener('input', () => { productData.label1 = label1.value; });
+	if (label1) label1.addEventListener('input', () => {
+		productData.label1 = label1.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+	});
 
-	if (ecolabel2) ecolabel2.addEventListener('change', () => { productData.ecolabel2 = ecolabel2.value; });
+	if (ecolabel2) ecolabel2.addEventListener('change', () => {
+		productData.ecolabel2 = ecolabel2.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+	});
 	if (title2) title2.addEventListener('input', () => { productData.title2 = title2.value; });
 	if (text2) text2.addEventListener('input', () => { productData.text2 = text2.value; });
-	if (label2) label2.addEventListener('input', () => { productData.label2 = label2.value; });
+	if (label2) label2.addEventListener('input', () => {
+		productData.label2 = label2.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+	});
 
 	if (priceOf1) priceOf1.addEventListener('change', () => { productData.priceOf1 = priceOf1.value; });
 	if (priceOf2) priceOf2.addEventListener('change', () => { productData.priceOf2 = priceOf2.value; });
@@ -298,7 +306,7 @@ function createTitleElement() {
 	newTitleSection.id = `title-group-${currentCounter}`;
 	newTitleSection.innerHTML = `
         <form class="form-title">
-            <label for="big-title${currentCounter}">Title (id: ${currentCounter})</label>
+            <label for="big-title${currentCounter}">Title N°${currentCounter}</label>
             <input type="text" id="big-title${currentCounter}" name="big-title${currentCounter}"><br>
         </form>`;
 
@@ -327,10 +335,10 @@ function createBannerElement() {
 	newBannerSection.id = `banner-group-${currentCounter}`;
 	newBannerSection.innerHTML = `
         <form class="form-banner">
-            <label for="banner-image${currentCounter}">Banner Image (id: ${currentCounter})</label>
+            <label for="banner-image${currentCounter}">Banner Image N°${currentCounter}</label>
             <input type="text" id="banner-image${currentCounter}" name="banner-image${currentCounter}"><br>
 
-            <label for="banner-link${currentCounter}">Banner Link (id: ${currentCounter})</label>
+            <label for="banner-link${currentCounter}">Banner Link N°${currentCounter}</label>
             <input type="text" id="banner-link${currentCounter}" name="banner-link${currentCounter}"><br>
         </form>`;
 
@@ -364,10 +372,10 @@ function createCtaElement() {
 	newCtaSection.id = `cta-group-${currentCounter}`;
 	newCtaSection.innerHTML = `
         <form class="form-cta">
-			<label for="cta-image${currentCounter}">CTA Image (id: ${currentCounter})</label>
+			<label for="cta-image${currentCounter}">CTA Image N°${currentCounter}</label>
             <input type="text" id="cta-image${currentCounter}" name="cta-image${currentCounter}"><br>
 
-            <label for="cta-link${currentCounter}">CTA Link (id: ${currentCounter})</label>
+            <label for="cta-link${currentCounter}">CTA Link N°${currentCounter}</label>
             <input type="text" id="cta-link${currentCounter}" name="cta-link${currentCounter}"><br>
         </form>`;
 
@@ -1064,8 +1072,7 @@ img { -ms-interpolation-mode: bicubic; border:0; display:block!important; }
 															cellpadding="0" cellspacing="0"
 															style="background-color:#FFFFFF;">
 															<tr>
-																<td style="font-size:0; display:block; height:10px;">
-																	&nbsp;</td>
+																<td style="font-size:0; display:block; height:10px;">&nbsp;</td>
 															</tr>
 															<!--CRIT GREEN : supprimer le 1er TR et transfo du 2eme à 35px si critère opposé et ajout de la classe "none" sur le TR / zone encadrée à supprimer si pas de critère-->
 															<tr>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'images</title>
+    <style>
+        img {
+            cursor: pointer;
+            max-width: 150px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        img:hover {
+            border-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sélectionnez une image</h1>
+
+    <div id="image-gallery">
+        <img src="image1.jpg" alt="Image 1" onclick="selectImage(this)">
+        <img src="image2.jpg" alt="Image 2" onclick="selectImage(this)">
+        <img src="image3.jpg" alt="Image 3" onclick="selectImage(this)">
+        <!-- Ajoute d'autres images ici -->
+    </div>
+
+    <script>
+        function selectImage(imageElement) {
+            const imageUrl = imageElement.src; // Récupère l'URL de l'image
+            localStorage.setItem('selectedImage', imageUrl); // Stocke l'URL dans le Local Storage
+            window.location.href = 'formulaire.html'; // Redirige vers la page du formulaire
+        }
+    </script>
+</body>
+
+</html>

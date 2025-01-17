@@ -1,0 +1,1066 @@
+<html>
+<head>
+<title>picto-label</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script>function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<style type="text/css">
+html {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.ReadMsgBody {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.ExternalClass * {
+    line-height: 100%;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+html {
+    width: 100%;
+}
+hr {
+    clear: both;
+}
+table {
+    border-collapse: collapse;
+}
+* {
+    -webkit-text-size-adjust: none!important;
+    -ms-text-size-adjust: none!important;
+    -moz-text-size-adjust: none!important;
+}
+body, table, td, a {
+    font-size: 12px;
+    color: #4c4c4c;
+    text-decoration: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+table, td {
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* iOS BLUE LINKS */
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+/* ANDROID CENTER FIX */
+div.list-label {
+    float: left;
+    margin-right: 50px;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #ffffff;
+}
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 14px;
+    transition: 0.3s;
+    color: #4c4c4c;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin: 1px 2px 0px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px 0px 20px 50px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    max-width: 1800px;
+}
+.clearfix {
+    overflow: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.imgPriority {
+    display: inline-block;
+    float: left;
+}
+.nameLabel {
+    display: inline-block;
+    float: left;
+    width: 150px;
+    height: 30px;
+}
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.titreColonne {
+    background-color: lightgray;
+    height: 25px;
+	 display: flex;
+  /*justify-content: center;*/
+	padding: 7px 0px;
+	align-items: left !important;
+}
+.numero {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 30px !important;
+}
+.titreColonne-3 {
+ width:280px;
+}
+/* Décommneter quand on fait des modif --
+.tabcontent {
+		display: block !important;
+	}
+.clearfix {
+		display: block !important;
+	} */
+@media only screen and (max-width:600px) {
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.titreColonne {
+    width: 100px;
+	height: 40px;
+}
+.numero {
+    width: 30px;
+	padding-left: 10px;
+}
+.imgPriority {
+    padding-bottom: 10px !important;
+}
+}
+/*.nameLabel {
+		height:25px;}
+	}*/
+</style>
+</head>
+<body style="font-family: 'Oswald', sans-serif; FONT-SIZE:14px;padding:20px;"  bgcolor="FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div class="tab">
+<button class="tablinks" onclick="openCity(event, 'PRIORITY')">Priority order</button>
+  <button class="tablinks" onclick="openCity(event, 'FR')">FR</button>
+  <button class="tablinks" onclick="openCity(event, 'BFR')">BFR</button>
+  <button class="tablinks" onclick="openCity(event, 'BFL')">BFL</button>
+  <button class="tablinks" onclick="openCity(event, 'NL')">NL</button>
+  <button class="tablinks" onclick="openCity(event, 'CFR')">CFR</button>
+  <button class="tablinks" onclick="openCity(event, 'CDE')">CDE</button>
+	<!--<button class="tablinks" onclick="openCity(event, 'AT')">AT</button>-->
+  <button class="tablinks" onclick="openCity(event, 'DE')">DEAT</button>
+	<button class="tablinks" onclick="openCity(event, 'ES')">ES</button>
+	<button class="tablinks" onclick="openCity(event, 'IT')">IT</button>
+  <button class="tablinks" onclick="openCity(event, 'PT')">PT</button>
+  <button class="tablinks" onclick="openCity(event, 'UK')">UK</button>
+  <button class="tablinks" onclick="openCity(event, 'CZ')">CZ</button>
+  <button class="tablinks" onclick="openCity(event, 'DK')">DK</button>
+	<button class="tablinks" onclick="openCity(event, 'HU')">HU</button>
+  <button class="tablinks" onclick="openCity(event, 'NO')">NO</button>
+  <button class="tablinks" onclick="openCity(event, 'PL')">PL</button>
+  <button class="tablinks" onclick="openCity(event, 'SE')">SE</button>
+  <button class="tablinks" onclick="openCity(event, 'SK')">SK</button>
+  
+</div>
+
+<!--  /////////////////////////////////  Tab content FR -->
+<div id="FR" class="tabcontent clearfix"> <strong>= FR =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sélection du mois"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre spéciale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre anniversaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Réduction supplémentaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-additional-discount-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="15 % de REMISE supplémentaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-additional-discount-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="20 % de REMISE supplémentaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-2-1-parcel.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="2 colis achetés, 1 colis offert"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-2-1.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="2 achetés, 1 offert"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="offre spéciale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-location.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Location possible"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-financement.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Financement possible"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-rental-info.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="ESSAI GRATUIT PENDANT 1 MOIS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMO WOMEN'S RAJADAYS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-pack.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PACK"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix de lancement"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix en baisse"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exclu web"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top éco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre spéciale"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-special-christmas-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Spécial Fêtes"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-promo-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMO"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-unique-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix Unique"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nouveauté"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Vente flash"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Déstockage"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produit-solidaire"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-ban-guide.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Votre guide offert"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-special-christmas.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Spécial Fêtes"> <br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -75%"><br>
+  </div>
+</div>
+
+<!--  /////////////////////////////////  Tab content BFR -->
+<div id="BFR" class="tabcontent  clearfix"> <strong>= BFR =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+      <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sélection du mois"><br>
+      <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre spéciale"><br>      
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre anniversaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Réduction supplémentaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-pack.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Pack"><br>
+	<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-mini-parcel.png" height="26" width="268" alt="MINI COLIS" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix de lancement"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix en baisse"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exclu web"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top éco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nouveauté"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Vente flash"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Déstockage"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produit-partage"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produit-partage"><br>
+    <br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFR-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -75%"><br>
+  </div>
+</div>
+
+<!--  /////////////////////////////////  Tab content BFL -->
+<div id="BFL" class="tabcontent  clearfix"> <strong>= BFL =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+      <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SELECTIE VAN DE MAAND"><br>
+      <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-special-offer-03.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SPECALE AANBIEDING"><br>
+      <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uitzonderlijk aanbod"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Verjaardagsaanbieding"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Extra korting"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-pack.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Voordeelpak"><br>
+	<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-mini-parcel.png" height="26" width="268" alt="PROEFPAKKET" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-special-offer-02.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uitzonderlijk aanbod"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Introductieprijs"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Verlaagde prijs"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Web only"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nieuw"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Flash sale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uitverkoop"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Partnerproduct"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-solidariteitsproduct.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="solidariteitsproduct"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/BFL-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -75%"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content NL -->
+<div id="NL" class="tabcontent  clearfix"> <strong>= NL =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SELECTIE VAN DE MAAND"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-special-offer-03.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SPECALE AANBIEDING"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uitzonderlijk aanbod"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-anniversary-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="JUBILEUM AANBIEDING"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Extra korting"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-pack.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Voordeelpak"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-additional-discount-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot 15% extra korting"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-additional-discount-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot 20% extra korting"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-pack.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Voordeelpak"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-special-offer-02.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uitzonderlijk aanbod"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Introductieprijs"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Verlaagde prijs"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-unique-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PRIJSTOPPER"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Web only"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nieuw"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Flash sale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uitverkoop"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Partnerproduct"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-solidariteitsproduct.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="solidariteitsproduct"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NL-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tot -75%"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content -CFR -->
+<div id="CFR" class="tabcontent  clearfix"> <strong>= CFR =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label"><img class="resize" src="https://imgnews.raja-group.com/00-structure/label/FR-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sélection du mois"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre spéciale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre anniversaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Réduction supplémentaire"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix de lancement"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix en baisse"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exclu web"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top éco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nouveauté"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Vente flash"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Déstockage"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produit-partage"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CFR-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -75%"><br>
+    <br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+<!--  /////////////////////////////////  Tab content CDE-->
+<div id="CDE" class="tabcontent  clearfix"> <strong>= CDE =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DEAT-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produkt des Monats"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sonderangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Geburstagsangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Zusätzliches Angebot"><br>
+	<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-2-1.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="2 +1 Angebot*"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SPEZIALANGEBOT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Einführungspreis"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="DAUERHAFTE PREISSENKUNG"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exklusiv im Web-Shop"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Neu"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Blitzangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Restposten"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-aktion.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKTION FRAUEN & UMWELT"><br>
+  </div>
+  <div class="list-label"><img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -75%"><br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+<!--  /////////////////////////////////  Tab content DE-->
+<div id="DE" class="tabcontent  clearfix"> 
+	<strong>= AT =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+<br>
+<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Geburstagsangebot"><br><br>
+	
+	<strong>= DE =</strong><br>
+  
+  <br>
+  <div class="list-label">
+<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DEAT-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produkt des Monats"><br>
+<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sonderangebot"><br>
+<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-anniversary-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jubiläumsangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Zusätzliches Angebot"> <br>
+	<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DEAT-label-2-1.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="2 +1 Angebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMO WOMEN'S RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Einführungspreis"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Preis-Senkung"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exklusiv im Web-Shop"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sonderangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CDE-label-special-offer-02.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SPEZIALANGEBOT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Neu"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Blitzangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Restposten"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-perspektiven.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="perspektiven fÜr frauen"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Charity-Produkt"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DE-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -75%"><br>
+    <br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+
+<!--  /////////////////////////////////  Tab content DE-->
+<div id="AT" class="tabcontent  clearfix"> <strong>= AT =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sonderangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Geburstagsangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Zusätzliches Angebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestpreis"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Einführungspreis"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Preis-Senkung"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exklusiv im Web-Shop"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Neu"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Blitzangebot"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Restposten"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Charity-Produkt"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/AT-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bis zu -75%"><br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+
+<!--  /////////////////////////////////  Tab content UK -->
+<div id="UK" class="tabcontent  clearfix"> <strong>= UK =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SELECTION OF THE MONTH"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Special offer"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Anniversary offer"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Additional discount"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="WOMEN'S RAJADAYS "> <br>
+	  <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-bulk-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bulk discount"><br>
+	  <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-pallet-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Pallet offer"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Launch price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Price drop"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Web only"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-price-saver.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PRICE SAVER"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="special offer"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="New product"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Flash sale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Clearance"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Partnership-product"><br>
+  </div>
+  <div class="list-label"><img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 5% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 10% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 15% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 20% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 25% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 30% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 35% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 40% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 45% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 50% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 55% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 60% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 65% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 70% off"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Up to 75% off"><br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+<!--  /////////////////////////////////  Tab content IT -->
+<div id="IT" class="tabcontent  clearfix"> <strong>= IT =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Selezione del mese"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offerta speciale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offerta anniversario"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Extra sconto"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-green-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMO GREEN RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prezzo lancio"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prezzi in ribasso"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Esclusiva web"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offerta speciale"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Novità"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offerta lampo"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-promo-flash.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Promo Flash"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fuori tutto"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prodotto solidale"><br>
+  </div>
+  <div class="list-label"><img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/IT-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Fino al -75%"><br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+<!--  /////////////////////////////////  Tab content ES -->
+<div id="ES" class="tabcontent  clearfix"> <strong>= ES =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Selección del mes"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta Especial"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-special-offer-xmas.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta Especial Navidad"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta aniversario"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Descuento adicional"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="OFERTA WOMEN'S RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-green-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="OFERTA GREEN RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-internet-week.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SEMANA DE INTERNET"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-special-offer-xmas.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="OFERTA ESPECIAL NAVIDAD"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="El mejor precio"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Precio de lanzamiento"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bajada de precio"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exclusivo web"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="El más vendido"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="OFERTA ESPECIAL"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Novedad"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta flash"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Últimas unidades"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-solidario-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PRODUCTO SOLIDARIO"> <br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/ES-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Hasta -75%"><br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+<!--  /////////////////////////////////  Tab content PT -->
+<div id="PT" class="tabcontent  clearfix"> <strong>= PT =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="A SELEÇÃO DO MÊS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta especial"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta aniversário"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Desconto adicional"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-promotion.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMOÇÃO "><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-promo-green-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMOÇÃO GREEN RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Melhor preço"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Preço de lançamento"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Redução de preço"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Preço exclusivo"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="O MAIS VENDIDO"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-promotion-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMOÇÃO"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Novo produto"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Venda flash"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Liquidação"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PRODUTOS SOLIDÁRIOS"> <br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PT-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Até -75%"><br>
+  </div>
+</div>
+<!-- END 1 tab --> 
+<!--  /////////////////////////////////  Tab content CZ -->
+<div id="CZ" class="tabcontent clearfix"> <strong>= CZ =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <div class="list-label"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="VÝBĚR MĚSÍCE"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Speciální nabídka"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Výroční Nabídka"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-anniversary-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Narozeninová nabídka"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Dodatečná sleva"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKCE WOMEN´S RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nejlepší cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Zaváděcí cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-exceptional-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Výjimečná cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nízké Ceny"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Pouze na webu"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-exceptional-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="VÝJIMEČNÁ CENA"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Speciální nabídka"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nový produkt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Blesková sleva"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Výprodej"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="CHARITATIVNÍ PRODUKT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-video.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROHLÉDNOUT SI VIDEO"><br>
+  </div>
+  <div class="list-label"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-29p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -29%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-42p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -42%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/CZ-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -75%"><br>
+  </div>
+</div>
+
+<!--  /////////////////////////////////  Tab content DK -->
+<div id="DK" class="tabcontent  clearfix"> <strong>= DK =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Specialtilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jubilæumstilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Xtra rabat"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Lanceringspris"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prisfald"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Kun på web"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Specialtilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nyhed"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Lyntilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Lagersalg"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="VELGØRENHEDSPRODUKT"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/DK-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Op til -75%"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content NO -->
+<div id="NO" class="tabcontent  clearfix"> <strong>= NO =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Spesialtilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jubileumstilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Ekstra rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-best-price-02.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SPESIALPRIS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Lanseringspris"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Redusert pris"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Kun på web"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Spesialtilbud"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nye produkter"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Flash sale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Lagersalg"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Kampanjeprodukt"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 5% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 10% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 15% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 20% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 25% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 30% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 35% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 40% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 45% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 50% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 55% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 60% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 65% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 70% rabatt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/NO-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Opptil 75% rabatt"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content PL -->
+<div id="PL" class="tabcontent  clearfix"> <strong>= PL =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROPOZYCJA MIESIĄCA"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta specjalna"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-70years-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="OFERTA JUBILEUSZOWA"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta urodzinowa"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Dodatkowy rabat"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="PROMOCJA WOMEN'S RAJADAYS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Najniższa cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Cena specjalna"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Niższa cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Tylko online"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Oferta specjalna"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nowość"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Promocja"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Wyprzedaż"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produkt charytatywny"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/PL-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Do -75%"><br>
+  </div>
+</div>
+
+<!--  /////////////////////////////////  Tab content -SE -->
+<div id="SE" class="tabcontent  clearfix"> <strong>= SE =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Specialerbjudande"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jubileumserbjudande"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Extra rabatt"><br>
+<img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-financement.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt=" Finansiering möjligt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Lanseringspris"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Sänkt pris"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Enbart webb"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-special-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SPECIALPRIS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nyhet"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Flash sale"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Utförsäljning"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Donationsprodukt"><br>
+  </div>
+  <div class="list-label"><img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SE-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Upp till -75%"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content SK -->
+<div id="SK" class="tabcontent  clearfix"> <strong>= SK =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <br>
+  <div class="list-label">
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="VÝBER MESIACA"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Špeciálna ponuka"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Výročná ponuka"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-anniversary-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Narodeninová ponuka"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Dodatočná zľava"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKCIA WOMEN´S RAJADAYS"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Najlepšia cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Uvádzacia cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-exceptional-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Výnimočná cena"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="NÍZKÁ CENA"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Len na webe"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Bestseller"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Špeciálna ponuka"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top Eco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nový produkt"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Blesková zľava"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Výpredaj"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="CHARITATÍVNY PRODUKT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-video.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="POZRIEŤ VIDEO"><br>
+  </div>
+  <div class="list-label"> <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-29p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -29%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-42p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -42%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/SK-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Až -75%"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content HU -->
+<div id="HU" class="tabcontent clearfix"> <strong>= HU =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <div class="list-label"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-month-selection.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="VÝBER MESIACA"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="KÜLÖNLEGES AJÁNLAT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-anniversary-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SZÜLINAPI AJÁNLAT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-anniversary-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="SZÜLÉTSNAPI AJÁNLAT"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-additional-discount.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="TOVÁBBI KEDVEZMÉNY"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-women-rajadays.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="RAJA NŐK NAPJA"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-2-1-parcel.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="2 colis achetés, 1 colis offert"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-2-1.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="2 achetés, 1 offert"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="BEVEZETŐ ÁR"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-price-drop.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="ALACSONY ÁRAK"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="CSAK ONLINE"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-bestseller.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="bestseller"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-special-offer-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="KÜLÖNLEGES AJÁNLAT"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-top-eco.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Top éco"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="ÚJ TERMÉK"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="VILLÁM AKCIÓ"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="KIÁRUSÍTÁS"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="JÓTÉKONYSÁGI TERMÉK"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-location.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Location possible"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-special-christmas.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Spécial Fêtes"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-special-christmas-2.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Spécial Fêtes"> </div>
+  <div class="list-label"> <br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-05p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -5%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-10p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -10%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-15p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -15%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-20p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -20%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-25p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -25%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -30%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-33p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -33%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-35p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -35%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-40p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -40%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-45p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -45%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-50p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -50%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-55p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -55%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-60p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -60%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-65p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -65%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-70p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -70%"><br>
+    <img class="resize" src="https://imgnews.raja-group.com/00-structure/label/HU-label-upto-75p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="AKÁR -75%"><br>
+  </div>
+</div>
+<!--  /////////////////////////////////  Tab content Priority order of badges -->
+<div id="PRIORITY" class="tabcontent clearfix"  style="display: block;"> <strong>= 
+  Priority order of badges =</strong><br>
+  https://imgnews.raja-group.com/00-structure/label/<br>
+  <div class="list-label"> <br>
+    <br>
+    <span class="numero titreColonne" style="font-weight:normal;">Display priority</span><span class="nameLabel titreColonne">Label name</span><span class="nameLabel titreColonne titreColonne-3">Label</span>
+    <hr>
+    <span class="numero">1</span><span class="nameLabel">Flash sale</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-flash-sale.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Vente flash">
+    <hr>
+    <span class="numero">2</span><span class="nameLabel">Clearance</span><img class="resize imgPriority imgPriority" src="https://imgnews.raja-group.com/00-structure/label/FR-label-clearance.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Déstockage">
+    <hr>
+    <span class="numero">3</span><span class="nameLabel">Web exclusive</span> <img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-web-only.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Exclu web">
+    <hr>
+    <span class="numero">4</span><span class="nameLabel">Special offer</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-special-offer.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Offre spéciale">
+    <hr>
+    <span class="numero">5</span><span class="nameLabel">Launch price</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-launch-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Prix de lancement">
+    <hr>
+    <span class="numero">6</span><span class="nameLabel">Best price</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/HU-label-best-price.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Best price">
+    <hr>
+    <span class="numero">7</span><span class="nameLabel">New</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-new-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Nouveauté">
+    <hr>
+    <span class="numero">8</span><span class="nameLabel">Women &amp; Environment</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-partnership-product.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Produit-solidaire">
+    <hr>
+    <span class="numero">9</span><span class="nameLabel">Up to XX %</span><img class="resize imgPriority" src="https://imgnews.raja-group.com/00-structure/label/UK-label-upto-30p.png" height="26" width="268" style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;" alt="Jusqu'à -30%">
+    <hr>
+  </div>
+</div>
+<p>source : W:\_2023\00-ressources-newsletters\1-sources\3-label</p>
+<!-- END Wrapper tab -->
+
+</body>
+</html>

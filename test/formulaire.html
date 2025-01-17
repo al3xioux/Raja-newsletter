@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <h1>Formulaire</h1>
+
+    <form>
+        <label for="image-link">Lien de l'image :</label>
+        <input type="text" id="image-link" placeholder="Le lien de l'image s'affichera ici" readonly>
+    </form>
+
+    <script>
+        // Récupère l'URL de l'image depuis le Local Storage
+        const imageUrl = localStorage.getItem('selectedImage');
+        if (imageUrl) {
+            document.getElementById('image-link').value = imageUrl; // Insère l'URL dans l'input
+        } else {
+            alert("Aucune image sélectionnée !");
+        }
+    </script>
+</body>
+
+</html>
