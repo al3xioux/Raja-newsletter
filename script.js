@@ -111,6 +111,13 @@ function createOneProductElement() {
     const priceInput = newProductSection.querySelector(`#one_price${currentCounter}`);
     const unitInput = newProductSection.querySelector(`#one_unit${currentCounter}`);
 
+	if (productData.one_ecolabel === '') {
+		productData.one_ecolabel = 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+	}
+	if (productData.one_label === '') {
+		productData.one_label = 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+	}
+
     // Add event listeners to update productData
     productLinkInput.addEventListener('input', () => { productData.one_productLink = productLinkInput.value; });
     imageInput.addEventListener('input', () => { productData.one_image = imageInput.value; });
