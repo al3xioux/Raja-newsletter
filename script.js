@@ -20,13 +20,8 @@ let order = 0; // Used to maintain the creation order for the HTML
 // Initialize the array that will store form data
 let formEntries = [];
 
-// Create a button to reset all information
-const resetButton = document.createElement('button');
-resetButton.textContent = 'Reset information';
-document.body.appendChild(resetButton);
-
 // Add an event listener for the reset button
-resetButton.addEventListener('click', function () {
+document.getElementById('reset').addEventListener('click', function () {
 	localStorage.clear();
 	location.reload();
 });
@@ -50,39 +45,37 @@ function createOneProductElement() {
         <form class="form-product">
             <section class="product-line">
                 <label for="one_productLink${currentCounter}">Product Link N°${currentCounter}</label>
-                <input type="text" id="one_productLink${currentCounter}" name="one_productLink${currentCounter}"><br>
+                <input type="text" id="one_productLink${currentCounter}" name="one_productLink${currentCounter}">
 
                 <label for="one_image${currentCounter}">Image N°${currentCounter}</label>
-                <input type="text" id="one_image${currentCounter}" name="one_image${currentCounter}"><br>
+                <input type="text" id="one_image${currentCounter}" name="one_image${currentCounter}">
 
                 <label for="one_ecolabel${currentCounter}">Eco-Label N°${currentCounter}</label>
                 <input type="text" id="one_ecolabel${currentCounter}" name="one_ecolabel${currentCounter}" >
                 <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
-                <br>
 
                 <label for="one_title${currentCounter}">Title N°${currentCounter}</label>
-                <input type="text" id="one_title${currentCounter}" name="one_title${currentCounter}" maxlength="50"><br>
+                <input type="text" id="one_title${currentCounter}" name="one_title${currentCounter}" maxlength="50">
 
                 <label for="one_text${currentCounter}">Text N°${currentCounter}</label>
-                <input type="text" id="one_text${currentCounter}" name="one_text${currentCounter}" maxlength="150"><br>
+                <input type="text" id="one_text${currentCounter}" name="one_text${currentCounter}" maxlength="150">
 
                 <label for="one_label${currentCounter}">Label N°${currentCounter}</label>
                 <input type="text" id="one_label${currentCounter}" name="one_label${currentCounter}">
                 <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
-                <br>
 
                 <label for="one_priceOf${currentCounter}">Price of N°${currentCounter}</label>
                 <select id="one_priceOf${currentCounter}" name="one_priceOf${currentCounter}">
                     <option value="">Select</option>
                     <option value="From">Yes</option>
                     <option value="">No</option>
-                </select><br>
+                </select>
 
                 <label for="one_price${currentCounter}">Price N°${currentCounter}</label>
-                <input type="text" id="one_price${currentCounter}" name="one_price${currentCounter}"><br>
+                <input type="text" id="one_price${currentCounter}" name="one_price${currentCounter}">
 
                 <label for="one_unit${currentCounter}">Unit N°${currentCounter}</label>
-                <input type="text" id="one_unit${currentCounter}" name="one_unit${currentCounter}"><br>
+                <input type="text" id="one_unit${currentCounter}" name="one_unit${currentCounter}">
             </section>
         </form>`;
 
@@ -146,76 +139,72 @@ function createProductElement() {
         <form class="form-product">
             <section class="product-line">
                 <label for="productLink${currentCounter}">Product Link N°${currentCounter}</label>
-                <input type="text" id="productLink${currentCounter}" name="productLink${currentCounter}"><br>
+                <input type="text" id="productLink${currentCounter}" name="productLink${currentCounter}">
 
                 <label for="image${currentCounter}">Image N°${currentCounter}</label>
-                <input type="text" id="image${currentCounter}" name="image${currentCounter}"><br>
+                <input type="text" id="image${currentCounter}" name="image${currentCounter}">
 
                 <label for="ecolabel${currentCounter}">Eco-Label N°${currentCounter}</label>
                 <input type="text" id="ecolabel${currentCounter}" name="ecolabel${currentCounter}">
                 <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
-                <br>
 
                 <label for="title${currentCounter}">Title N°${currentCounter}</label>
-                <input type="text" id="title${currentCounter}" name="title${currentCounter}" maxlength="50"><br>
+                <input type="text" id="title${currentCounter}" name="title${currentCounter}" maxlength="50">
 
                 <label for="text${currentCounter}">Text N°${currentCounter}</label>
-                <input type="text" id="text${currentCounter}" name="text${currentCounter}" maxlength="60"><br>
+                <input type="text" id="text${currentCounter}" name="text${currentCounter}" maxlength="60">
 
                 <label for="label${currentCounter}">Label N°${currentCounter}</label>
                 <input type="text" id="label${currentCounter}" name="label${currentCounter}">
                 <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
-                <br>
 
                 <label for="priceOf${currentCounter}">Price of N°${currentCounter}</label>
                 <select id="priceOf${currentCounter}" name="priceOf${currentCounter}">
                     <option value="">Select</option>
                     <option value="From">Yes</option>
                     <option value="">No</option>
-                </select><br>
+                </select>
 
                 <label for="price${currentCounter}">Price N°${currentCounter}</label>
-                <input type="text" id="price${currentCounter}" name="price${currentCounter}"><br>
+                <input type="text" id="price${currentCounter}" name="price${currentCounter}">
 
                 <label for="unit${currentCounter}">Unit N°${currentCounter}</label>
-                <input type="text" id="unit${currentCounter}" name="unit${currentCounter}"><br>
+                <input type="text" id="unit${currentCounter}" name="unit${currentCounter}">
             </section>
 
             <section class="product-line">
                 <label for="productLink${currentCounter + 1}">Product Link N°${currentCounter + 1}</label>
-                <input type="text" id="productLink${currentCounter + 1}" name="productLink${currentCounter + 1}"><br>
+                <input type="text" id="productLink${currentCounter + 1}" name="productLink${currentCounter + 1}">
 
                 <label for="image${currentCounter + 1}">Image N°${currentCounter + 1}</label>
-                <input type="text" id="image${currentCounter + 1}" name="image${currentCounter + 1}"><br>
+                <input type="text" id="image${currentCounter + 1}" name="image${currentCounter + 1}">
 
                 <label for="ecolabel${currentCounter + 1}">Eco-Label N°${currentCounter + 1}</label>
                 <input type="text" id="ecolabel${currentCounter + 1}" name="ecolabel${currentCounter + 1}">
                 <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
-                <br>
 
                 <label for="title${currentCounter + 1}">Title N°${currentCounter + 1}</label>
-                <input type="text" id="title${currentCounter + 1}" name="title${currentCounter + 1}" maxlength="50"><br>
+                <input type="text" id="title${currentCounter + 1}" name="title${currentCounter + 1}" maxlength="50">
 
                 <label for="text${currentCounter + 1}">Text N°${currentCounter + 1}</label>
-                <input type="text" id="text${currentCounter + 1}" name="text${currentCounter + 1}" maxlength="60"><br>
+                <input type="text" id="text${currentCounter + 1}" name="text${currentCounter + 1}" maxlength="60">
 
                 <label for="label${currentCounter + 1}">Label N°${currentCounter + 1}</label>
                 <input type="text" id="label${currentCounter + 1}" name="label${currentCounter + 1}">
                 <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
-                <br>
 
                 <label for="priceOf${currentCounter + 1}">Price of N°${currentCounter + 1}</label>
                 <select id="priceOf${currentCounter + 1}" name="priceOf${currentCounter + 1}">
                     <option value="">Select</option>
                     <option value="From">Yes</option>
                     <option value="">No</option>
-                </select><br>
+                </select>
 
                 <label for="price${currentCounter + 1}">Price N°${currentCounter + 1}</label>
-                <input type="text" id="price${currentCounter + 1}" name="price${currentCounter + 1}"><br>
+                <input type="text" id="price${currentCounter + 1}" name="price${currentCounter + 1}">
 
                 <label for="unit${currentCounter + 1}">Unit N°${currentCounter + 1}</label>
-                <input type="text" id="unit${currentCounter + 1}" name="unit${currentCounter + 1}"><br>
+                <input type="text" id="unit${currentCounter + 1}" name="unit${currentCounter + 1}">
             </section>
         </form>`;
 
@@ -314,7 +303,7 @@ function createTitleElement() {
 	newTitleSection.innerHTML = `
         <form class="form-title">
             <label for="big-title${currentCounter}">Title N°${currentCounter}</label>
-            <input type="text" id="big-title${currentCounter}" name="big-title${currentCounter}"><br>
+            <input type="text" id="big-title${currentCounter}" name="big-title${currentCounter}">
         </form>`;
 
 	const bigTitleInput = newTitleSection.querySelector(`#big-title${currentCounter}`);
@@ -343,10 +332,10 @@ function createBannerElement() {
 	newBannerSection.innerHTML = `
         <form class="form-banner">
             <label for="banner-image${currentCounter}">Banner Image N°${currentCounter}</label>
-            <input type="text" id="banner-image${currentCounter}" name="banner-image${currentCounter}"><br>
+            <input type="text" id="banner-image${currentCounter}" name="banner-image${currentCounter}">
 
             <label for="banner-link${currentCounter}">Banner Link N°${currentCounter}</label>
-            <input type="text" id="banner-link${currentCounter}" name="banner-link${currentCounter}"><br>
+            <input type="text" id="banner-link${currentCounter}" name="banner-link${currentCounter}">
         </form>`;
 
 	const bannerImageInput = newBannerSection.querySelector(`#banner-image${currentCounter}`);
@@ -380,10 +369,10 @@ function createCtaElement() {
 	newCtaSection.innerHTML = `
         <form class="form-cta">
 			<label for="cta-image${currentCounter}">CTA Image N°${currentCounter}</label>
-            <input type="text" id="cta-image${currentCounter}" name="cta-image${currentCounter}"><br>
+            <input type="text" id="cta-image${currentCounter}" name="cta-image${currentCounter}">
 
             <label for="cta-link${currentCounter}">CTA Link N°${currentCounter}</label>
-            <input type="text" id="cta-link${currentCounter}" name="cta-link${currentCounter}"><br>
+            <input type="text" id="cta-link${currentCounter}" name="cta-link${currentCounter}">
         </form>`;
 
 	const ctaLinkInput = newCtaSection.querySelector(`#cta-link${currentCounter}`);

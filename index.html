@@ -43,19 +43,26 @@
         </select>
     </form>
 
-    <!-- Container where product, title, banner, and link forms will appear -->
-    <div id="corps"></div>
+    <!-- New container for side-by-side layout -->
+    <div id="main-container">
+        <!-- Container where product, title, banner, and link forms will appear -->
+        <div id="corps"></div>
 
-    <!-- Section containing buttons to create forms -->
-    <div id="create-button">
-        <button id="oneproduct">Add 1 Product</button>
-        <button id="product">Add 2 Products</button>
-        <button id="title">Add Title</button>
-        <button id="banner">Add Banner</button>
-        <button id="cta">Add CTA</button>
+        <!-- Section containing buttons to create forms -->
+        <div id="create-button">
+            <button id="oneproduct">Add 1 Product</button>
+            <button id="product">Add 2 Products</button>
+            <button id="title">Add Title</button>
+            <button id="banner">Add Banner</button>
+            <button id="cta">Add CTA</button>
+        </div>
     </div>
 
-    <button id="submit">Save</button>
-    <button id="generateHTML">Generate HTML File</button>
+    <!-- New div to align buttons in a row -->
+    <div id="button-container">
+        <button id="submit">Save</button>
+        <button id="generateHTML">Generate HTML File</button>
+        <button id="reset">Reset Information</button>
+    </div>
 </body>
 </html>

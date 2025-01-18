@@ -25,6 +25,49 @@
   evt.currentTarget.className += " active";
 }
 
+// Ajoute une fonction pour copier le lien de l'image
+function copyImageLink(event) {
+  const imageUrl = event.target.src;
+  navigator.clipboard.writeText(imageUrl).then(() => {
+    showCopyConfirmation(event.pageX, event.pageY);
+  }).catch(err => {
+    console.error('Erreur lors de la copie du lien : ', err);
+  });
+}
+
+// Fonction pour afficher l'animation de confirmation de copie
+function showCopyConfirmation(x, y) {
+  const confirmation = document.createElement('div');
+  confirmation.className = 'copy-confirmation';
+  confirmation.textContent = 'Link copied!';
+  document.body.appendChild(confirmation);
+
+  // Positionne l'élément près du curseur
+  confirmation.style.left = `${x + 10}px`;
+  confirmation.style.top = `${y + 10}px`;
+
+  // Affiche l'élément
+  requestAnimationFrame(() => {
+    confirmation.style.opacity = 1;
+  });
+
+  // Supprime l'élément après 1 seconde
+  setTimeout(() => {
+    confirmation.style.opacity = 0;
+    setTimeout(() => {
+      document.body.removeChild(confirmation);
+    }, 500);
+  }, 1000);
+}
+
+// Attache l'événement de clic à toutes les images
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('.resize_h40');
+  images.forEach(image => {
+    image.addEventListener('click', copyImageLink);
+  });
+});
+
 </script>
 <style type="text/css">
 html {
@@ -149,6 +192,18 @@ img {
 		display: block !important;
 	}
 
+/* Style pour l'animation de confirmation de copie */
+.copy-confirmation {
+  position: absolute;
+  background-color: #5929F4;
+  color: #222831;
+  padding: 10px;  /* Augmenté pour plus de taille */
+  border-radius: 5px;
+  font-size: 16px;  /* Augmenté pour une police plus grande */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 </style>
 </head>
 <body style="font-family: 'Oswald', sans-serif; FONT-SIZE:14px;padding:20px;"  bgcolor="FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
