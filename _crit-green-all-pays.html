@@ -23,9 +23,9 @@
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-}
 
-// Ajoute une fonction pour copier le lien de l'image
+  
+// Ajoute une fonction pour copier le lien de l'image et fermer la page après 3 secondes
 function copyImageLink(event) {
   const imageUrl = event.target.src;
   navigator.clipboard.writeText(imageUrl).then(() => {
@@ -62,13 +62,12 @@ function showCopyConfirmation(x, y) {
 
 // Attache l'événement de clic à toutes les images
 document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('.resize_h40');
+  const images = document.querySelectorAll('.resize');
   images.forEach(image => {
     image.addEventListener('click', copyImageLink);
   });
 });
-
-</script>
+}</script>
 <style type="text/css">
 html {
 	width: 100%;
@@ -184,18 +183,17 @@ img {
 		color: gainsboro !important;
 		font-weight: normal !important;
 	}
-/*Décommneter quand on fait des modif */
+/*Décommneter quand on fait des modif /
 .tabcontent {
 		display: block !important;
 	}
 .clearfix {
 		display: block !important;
 	}
-
 /* Style pour l'animation de confirmation de copie */
 .copy-confirmation {
   position: absolute;
-  background-color: #5929F4;
+  background-color: #276CF1;
   color: #222831;
   padding: 10px;  /* Augmenté pour plus de taille */
   border-radius: 5px;
