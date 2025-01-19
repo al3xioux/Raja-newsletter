@@ -24,7 +24,7 @@
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 
-  
+}
 // Ajoute une fonction pour copier le lien de l'image et fermer la page après 3 secondes
 function copyImageLink(event) {
   const imageUrl = event.target.src;
@@ -62,12 +62,12 @@ function showCopyConfirmation(x, y) {
 
 // Attache l'événement de clic à toutes les images
 document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('.resize');
+  const images = document.querySelectorAll('.resize_h40');
   images.forEach(image => {
     image.addEventListener('click', copyImageLink);
   });
 });
-}</script>
+</script>
 <style type="text/css">
 html {
 	width: 100%;
