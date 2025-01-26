@@ -8,7 +8,7 @@ const titleButton = document.getElementById("title");
 const bannerButton = document.getElementById("banner");
 const ctaButton = document.getElementById("cta");
 const contentContainer = document.getElementById("corps");
-const submitButton = document.getElementById("submit");
+const generateBtn = document.getElementById('generatebtn');
 
 // Initialize counters for each form element type
 let productCount = 0;
@@ -22,15 +22,33 @@ let formEntries = [];
 
 // Add an event listener for the reset button
 document.getElementById('reset').addEventListener('click', function () {
-	localStorage.clear();
-	location.reload();
+	if (confirm("Êtes-vous sûr de vouloir réinitialiser les informations ?")) {
+		localStorage.clear();
+		location.reload();
+	}
 });
 
-// Function to handle form submission
-submitButton.addEventListener('click', function (event) {
-	event.preventDefault(); // Prevent page reload
-	localStorage.setItem('formData', JSON.stringify(formEntries));
-});
+function addMaxLengthListener(inputElement) {
+    inputElement.addEventListener('input', () => {
+        if (inputElement.value.length >= inputElement.maxLength) {
+            inputElement.style.borderColor = 'red';
+			inputElement.style.borderWidth = '2px';
+        } else {
+            inputElement.style.borderColor = ''; // Reset to default
+			inputElement.style.borderWidth = '1px';
+        }
+    });
+}
+
+// Helper function to update the preview
+function updatePreview(previewElement, imageUrl) {
+    if (imageUrl) {
+        previewElement.src = imageUrl;
+        previewElement.style.display = "block";
+    } else {
+        previewElement.style.display = "none";
+    }
+}
 
 function createOneProductElement() {
     order++;
@@ -43,6 +61,7 @@ function createOneProductElement() {
 
     newProductSection.innerHTML = `
         <form class="form-product">
+            <button type="button" class="delete-btn" data-id="product-group-${currentCounter}">Supprimer</button>
             <section class="product-line">
                 <label for="one_productLink${currentCounter}">Product Link N°${currentCounter}</label>
                 <input type="text" id="one_productLink${currentCounter}" name="one_productLink${currentCounter}">
@@ -51,7 +70,8 @@ function createOneProductElement() {
                 <input type="text" id="one_image${currentCounter}" name="one_image${currentCounter}">
 
                 <label for="one_ecolabel${currentCounter}">Eco-Label N°${currentCounter}</label>
-                <input type="text" id="one_ecolabel${currentCounter}" name="one_ecolabel${currentCounter}" >
+                <input type="text" id="one_ecolabel${currentCounter}" name="one_ecolabel${currentCounter}">
+                <img id="preview_ecolabel${currentCounter}" class="image-preview" src="" alt="Eco-Label Preview" style="display: none; width: 100px; height: auto; margin-top: 5px;">
                 <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
 
                 <label for="one_title${currentCounter}">Title N°${currentCounter}</label>
@@ -62,6 +82,7 @@ function createOneProductElement() {
 
                 <label for="one_label${currentCounter}">Label N°${currentCounter}</label>
                 <input type="text" id="one_label${currentCounter}" name="one_label${currentCounter}">
+                <img id="preview_label${currentCounter}" class="image-preview" src="" alt="Label Preview" style="display: none; width: 100px; height: auto; margin-top: 5px;">
                 <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
 
                 <label for="one_priceOf${currentCounter}">Price of N°${currentCounter}</label>
@@ -95,26 +116,34 @@ function createOneProductElement() {
 
     // Query the elements
     const productLinkInput = newProductSection.querySelector(`#one_productLink${currentCounter}`);
-    const imageInput = newProductSection.querySelector(`#one_image${currentCounter}`);
     const ecolabelInput = newProductSection.querySelector(`#one_ecolabel${currentCounter}`);
+    const ecolabelPreview = newProductSection.querySelector(`#preview_ecolabel${currentCounter}`);
     const titleInput = newProductSection.querySelector(`#one_title${currentCounter}`);
     const textInput = newProductSection.querySelector(`#one_text${currentCounter}`);
     const labelInput = newProductSection.querySelector(`#one_label${currentCounter}`);
+	const labelPreview = newProductSection.querySelector(`#preview_label${currentCounter}`);
     const priceOfInput = newProductSection.querySelector(`#one_priceOf${currentCounter}`);
     const priceInput = newProductSection.querySelector(`#one_price${currentCounter}`);
     const unitInput = newProductSection.querySelector(`#one_unit${currentCounter}`);
 
-	if (productData.one_ecolabel === '') {
-		productData.one_ecolabel = 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
-	}
-	if (productData.one_label === '') {
-		productData.one_label = 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
-	}
+    // Set default values for ecolabel and label if empty
+    if (productData.one_ecolabel === '') {
+        productData.one_ecolabel = 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+    }
+    if (productData.one_label === '') {
+        productData.one_label = 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+    }
 
-    // Add event listeners to update productData
+    // Add event listeners to update productData and preview images
     productLinkInput.addEventListener('input', () => { productData.one_productLink = productLinkInput.value; });
-    imageInput.addEventListener('input', () => { productData.one_image = imageInput.value; });
-	ecolabelInput.addEventListener('input', () => { productData.one_ecolabel = ecolabelInput.value; });
+    labelInput.addEventListener('input', () => {
+        productData.one_label = labelInput.value;
+        updatePreview(labelPreview, productData.one_label);
+    });
+    ecolabelInput.addEventListener('input', () => {
+        productData.one_ecolabel = ecolabelInput.value;
+        updatePreview(ecolabelPreview, productData.one_ecolabel);
+    });
     titleInput.addEventListener('input', () => { productData.one_title = titleInput.value; });
     textInput.addEventListener('input', () => { productData.one_text = textInput.value; });
     labelInput.addEventListener('input', () => { productData.one_label = labelInput.value; });
@@ -137,15 +166,18 @@ function createProductElement() {
 
 	newProductSection.innerHTML = `
         <form class="form-product">
+            <button type="button" class="delete-btn" data-id="product-group-${currentCounter}">Supprimer</button>
             <section class="product-line">
                 <label for="productLink${currentCounter}">Product Link N°${currentCounter}</label>
                 <input type="text" id="productLink${currentCounter}" name="productLink${currentCounter}">
 
                 <label for="image${currentCounter}">Image N°${currentCounter}</label>
                 <input type="text" id="image${currentCounter}" name="image${currentCounter}">
+				<img id="preview_image${currentCounter}" class="image-preview" src="" alt="Image Preview" style="display: none; width: 400px; height: auto; margin-top: 5px;">
 
                 <label for="ecolabel${currentCounter}">Eco-Label N°${currentCounter}</label>
                 <input type="text" id="ecolabel${currentCounter}" name="ecolabel${currentCounter}">
+				<img id="preview_ecolabel${currentCounter}" class="image-preview" src="" alt="Eco-Label Preview" style="display: none; width: 200px; height: auto; margin-top: 5px;">
                 <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
 
                 <label for="title${currentCounter}">Title N°${currentCounter}</label>
@@ -156,6 +188,7 @@ function createProductElement() {
 
                 <label for="label${currentCounter}">Label N°${currentCounter}</label>
                 <input type="text" id="label${currentCounter}" name="label${currentCounter}">
+				<img id="preview_label${currentCounter}" class="image-preview" src="" alt="Label Preview" style="display: none; width: 200px; height: auto; margin-top: 5px;">
                 <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
 
                 <label for="priceOf${currentCounter}">Price of N°${currentCounter}</label>
@@ -178,9 +211,10 @@ function createProductElement() {
 
                 <label for="image${currentCounter + 1}">Image N°${currentCounter + 1}</label>
                 <input type="text" id="image${currentCounter + 1}" name="image${currentCounter + 1}">
-
+				<img id="preview_image${currentCounter + 1}" class="image-preview" src="" alt="Image Preview" style="display: none; width: 400px; height: auto; margin-top: 5px;">
                 <label for="ecolabel${currentCounter + 1}">Eco-Label N°${currentCounter + 1}</label>
                 <input type="text" id="ecolabel${currentCounter + 1}" name="ecolabel${currentCounter + 1}">
+				<img id="preview_ecolabel${currentCounter + 1}" class="image-preview" src="" alt="Eco-Label Preview" style="display: none; width: 200px; height: auto; margin-top: 5px;">
                 <button type="button" onclick="window.open('_crit-green-all-pays.html', '_blank')">Eco-Label</button>
 
                 <label for="title${currentCounter + 1}">Title N°${currentCounter + 1}</label>
@@ -191,6 +225,7 @@ function createProductElement() {
 
                 <label for="label${currentCounter + 1}">Label N°${currentCounter + 1}</label>
                 <input type="text" id="label${currentCounter + 1}" name="label${currentCounter + 1}">
+				<img id="preview_label${currentCounter + 1}" class="image-preview" src="" alt="Label Preview" style="display: none; width: 200px; height: auto; margin-top: 5px;">
                 <button type="button" onclick="window.open('_label-all-pays.html', '_blank')">Label</button>
 
                 <label for="priceOf${currentCounter + 1}">Price of N°${currentCounter + 1}</label>
@@ -238,13 +273,17 @@ function createProductElement() {
 	const title1 = newProductSection.querySelector(`#title${currentCounter}`);
 	const text1 = newProductSection.querySelector(`#text${currentCounter}`);
 	const label1 = newProductSection.querySelector(`#label${currentCounter}`);
+	const labelPreview1 = newProductSection.querySelector(`#preview_label${currentCounter}`);
 	const priceOf1 = newProductSection.querySelector(`#priceOf${currentCounter}`);
 	const price1 = newProductSection.querySelector(`#price${currentCounter}`);
 	const unit1 = newProductSection.querySelector(`#unit${currentCounter}`);
+	const ecolabelPreview1 = newProductSection.querySelector(`#preview_ecolabel${currentCounter}`);
 	const ecolabel2 = newProductSection.querySelector(`#ecolabel${currentCounter + 1}`);
 	const title2 = newProductSection.querySelector(`#title${currentCounter + 1}`);
 	const text2 = newProductSection.querySelector(`#text${currentCounter + 1}`);
 	const label2 = newProductSection.querySelector(`#label${currentCounter + 1}`);
+	const ecolabelPreview2 = newProductSection.querySelector(`#preview_ecolabel${currentCounter + 1}`);
+	const labelPreview2 = newProductSection.querySelector(`#preview_label${currentCounter + 1}`);
 	const priceOf2 = newProductSection.querySelector(`#priceOf${currentCounter + 1}`);
 	const price2 = newProductSection.querySelector(`#price${currentCounter + 1}`);
 	const unit2 = newProductSection.querySelector(`#unit${currentCounter + 1}`);
@@ -252,26 +291,31 @@ function createProductElement() {
 	const pLink2 = newProductSection.querySelector(`#productLink${currentCounter + 1}`);
 	const img1 = newProductSection.querySelector(`#image${currentCounter}`);
 	const img2 = newProductSection.querySelector(`#image${currentCounter + 1}`);
+	const imgPreview1 = newProductSection.querySelector(`#preview_image${currentCounter}`);
+	const imgPreview2 = newProductSection.querySelector(`#preview_image${currentCounter + 1}`);
 
 	// Ensure elements are not null before adding event listeners
-	if (ecolabel1) ecolabel1.addEventListener('change', () => {
+	if (ecolabel1) ecolabel1.addEventListener('input', () => {
 		productData.ecolabel1 = ecolabel1.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+		updatePreview(ecolabelPreview1, productData.ecolabel1);
 	});
 	if (title1) title1.addEventListener('input', () => { productData.title1 = title1.value; });
 	if (text1) text1.addEventListener('input', () => { productData.text1 = text1.value; });
 	if (label1) label1.addEventListener('input', () => {
 		productData.label1 = label1.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+		updatePreview(labelPreview1, productData.label1);
 	});
 
-	if (ecolabel2) ecolabel2.addEventListener('change', () => {
+	if (ecolabel2) ecolabel2.addEventListener('input', () => {
 		productData.ecolabel2 = ecolabel2.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+		updatePreview(ecolabelPreview2, productData.ecolabel2);
 	});
 	if (title2) title2.addEventListener('input', () => { productData.title2 = title2.value; });
 	if (text2) text2.addEventListener('input', () => { productData.text2 = text2.value; });
 	if (label2) label2.addEventListener('input', () => {
 		productData.label2 = label2.value || 'https://imgnews.raja-group.com/00-structure/label/ALL-label-blank.png';
+		updatePreview(labelPreview2, productData.label2);
 	});
-
 	if (priceOf1) priceOf1.addEventListener('change', () => { productData.priceOf1 = priceOf1.value; });
 	if (priceOf2) priceOf2.addEventListener('change', () => { productData.priceOf2 = priceOf2.value; });
 
@@ -284,11 +328,34 @@ function createProductElement() {
 	if (pLink1) pLink1.addEventListener('input', () => { productData.productLink1 = pLink1.value; });
 	if (pLink2) pLink2.addEventListener('input', () => { productData.productLink2 = pLink2.value; });
 
-	if (img1) img1.addEventListener('input', () => { productData.image1 = img1.value; });
-	if (img2) img2.addEventListener('input', () => { productData.image2 = img2.value; });
+	if (img1) img1.addEventListener('input', () => {
+		productData.image1 = img1.value;
+		updatePreview(imgPreview1, productData.image1);
+	});
+	if (img2) img2.addEventListener('input', () => {
+		productData.image2 = img2.value;
+		updatePreview(imgPreview2, productData.image2);
+	});
+
+	// Ajoutez l'écouteur d'événements pour vérifier la longueur maximale
+	addMaxLengthListener(title1);
+	addMaxLengthListener(text1);
+	addMaxLengthListener(title2);
+	addMaxLengthListener(text2);
 
 	// Add the new element to the array
 	formEntries.push({ order: order, type: 'product', data: productData });
+
+	// Add event listener for the delete button
+	newProductSection.querySelector('.delete-btn').addEventListener('click', function() {
+		const sectionId = this.getAttribute('data-id');
+		const sectionToRemove = document.getElementById(sectionId);
+		if (sectionToRemove) {
+			sectionToRemove.remove();
+			// Optionally, remove the entry from formEntries
+			formEntries = formEntries.filter(entry => entry.data !== productData);
+		}
+	});
 }
 
 // Function to create a title element
@@ -302,6 +369,7 @@ function createTitleElement() {
 	newTitleSection.id = `title-group-${currentCounter}`;
 	newTitleSection.innerHTML = `
         <form class="form-title">
+            <button type="button" class="delete-btn" data-id="title-group-${currentCounter}">Supprimer</button>
             <label for="big-title${currentCounter}">Title N°${currentCounter}</label>
             <input type="text" id="big-title${currentCounter}" name="big-title${currentCounter}">
         </form>`;
@@ -318,6 +386,17 @@ function createTitleElement() {
 
 	formEntries.push({ order: order, type: 'title', data: titleData });
 	contentContainer.appendChild(newTitleSection);
+
+	// Add event listener for the delete button
+	newTitleSection.querySelector('.delete-btn').addEventListener('click', function() {
+		const sectionId = this.getAttribute('data-id');
+		const sectionToRemove = document.getElementById(sectionId);
+		if (sectionToRemove) {
+			sectionToRemove.remove();
+			// Optionally, remove the entry from formEntries
+			formEntries = formEntries.filter(entry => entry.data.bigTitle !== titleData.bigTitle);
+		}
+	});
 }
 
 // Function to create a banner element
@@ -331,6 +410,7 @@ function createBannerElement() {
 	newBannerSection.id = `banner-group-${currentCounter}`;
 	newBannerSection.innerHTML = `
         <form class="form-banner">
+            <button type="button" class="delete-btn" data-id="banner-group-${currentCounter}">Supprimer</button>
             <label for="banner-image${currentCounter}">Banner Image N°${currentCounter}</label>
             <input type="text" id="banner-image${currentCounter}" name="banner-image${currentCounter}">
 
@@ -355,6 +435,17 @@ function createBannerElement() {
 
 	formEntries.push({ order: order, type: 'banner', data: bannerData });
 	contentContainer.appendChild(newBannerSection);
+
+	// Add event listener for the delete button
+	newBannerSection.querySelector('.delete-btn').addEventListener('click', function() {
+		const sectionId = this.getAttribute('data-id');
+		const sectionToRemove = document.getElementById(sectionId);
+		if (sectionToRemove) {
+			sectionToRemove.remove();
+			// Optionally, remove the entry from formEntries
+			formEntries = formEntries.filter(entry => entry.data !== bannerData);
+		}
+	});
 }
 
 // Function to create a link element
@@ -368,7 +459,8 @@ function createCtaElement() {
 	newCtaSection.id = `cta-group-${currentCounter}`;
 	newCtaSection.innerHTML = `
         <form class="form-cta">
-			<label for="cta-image${currentCounter}">CTA Image N°${currentCounter}</label>
+            <button type="button" class="delete-btn" data-id="cta-group-${currentCounter}">Supprimer</button>
+            <label for="cta-image${currentCounter}">CTA Image N°${currentCounter}</label>
             <input type="text" id="cta-image${currentCounter}" name="cta-image${currentCounter}">
 
             <label for="cta-link${currentCounter}">CTA Link N°${currentCounter}</label>
@@ -392,6 +484,17 @@ function createCtaElement() {
 
 	formEntries.push({ order: order, type: 'cta', data: ctaData });
 	contentContainer.appendChild(newCtaSection);
+
+	// Add event listener for the delete button
+	newCtaSection.querySelector('.delete-btn').addEventListener('click', function() {
+		const sectionId = this.getAttribute('data-id');
+		const sectionToRemove = document.getElementById(sectionId);
+		if (sectionToRemove) {
+			sectionToRemove.remove();
+			// Optionally, remove the entry from formEntries
+			formEntries = formEntries.filter(entry => entry.data !== ctaData);
+		}
+	});
 }
 
 // Event listener for adding a product
@@ -522,113 +625,113 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-// Generate the HTML file
-
-// Retrieve the generation button
-const generateBtn = document.getElementById('generateHTML');
-
-// Retrieve the input element for the document title
-const documentTitleInput = document.getElementById('documentTitle');
+// Function to save form data
+function saveFormData() {
+    localStorage.setItem('formData', JSON.stringify(formEntries));
+}
 
 // Function to generate the HTML file
 function generateHTMLDocument() {
-	// Retrieve the document title
-	const documentTitle = documentTitleInput.value || 'Newsletter'; // Default value if empty
+    // Save form data before generating the document
+    saveFormData();
 
-	// Retrieve form data from localStorage
-	const formData = JSON.parse(localStorage.getItem('formData')) || [];
-	const storedLanguage = localStorage.getItem('langue');
+    // Retrieve the document title
+    const documentTitle = document.getElementById('documentTitle').value || 'Newsletter'; // Default value if empty
 
-	if (formData.length === 0) {
-		return;
-	}
+    // Retrieve form data from localStorage
+    const formData = JSON.parse(localStorage.getItem('formData')) || [];
+    const storedLanguage = localStorage.getItem('langue');
 
-	// Pick the correct header and footer based on the language
-	let header, footer;
-	switch (storedLanguage) {
-		case 'fr':
-			header = headerFR;
-			footer = footerFR;
-			break;
-		case 'es':
-			header = headerES;
-			footer = footerES;
-			break;
-		case 'uk':
-			header = headerUK;
-			footer = footerUK;
-			break;
-		case 'at':
-			header = headerAT;
-			footer = footerAT;
-			break;
-		case 'bfl':
-			header = headerBFL;
-			footer = footerBFL;
-			break;
-		case 'bfr':
-			header = headerBFR;
-			footer = footerBFR;
-			break;
-		case 'cde':
-			header = headerCDE;
-			footer = footerCDE;
-			break;
-		case 'cfr':
-			header = headerCFR;
-			footer = footerCFR;
-			break;
-		case 'cz':
-			header = headerCZ;
-			footer = footerCZ;
-			break;
-		case 'de':
-			header = headerDE;
-			footer = footerDE;
-			break;
-		case 'dk':
-			header = headerDK;
-			footer = footerDK;
-			break;
-		case 'hu':
-			header = headerHU;
-			footer = footerHU;
-			break;
-		case 'it':
-			header = headerIT;
-			footer = footerIT;
-			break;
-		case 'nl':
-			header = headerNL;
-			footer = footerNL;
-			break;
-		case 'no':
-			header = headerNO;
-			footer = footerNO;
-			break;
-		case 'pl':
-			header = headerPL;
-			footer = footerPL;
-			break;
-		case 'pt':
-			header = headerPT;
-			footer = footerPT;
-			break;
-		case 'se':
-			header = headerSE;
-			footer = footerSE;
-			break;
-		case 'sk':
-			header = headerSK;
-			footer = footerSK;
-			break;
-		default:
-			header = headerUK; // Default value
-			footer = footerUK;
-	}
+    if (formData.length === 0) {
+        return;
+    }
 
-	// Start constructing the HTML
-	let htmlContent = `<!DOCTYPE html
+    // Pick the correct header and footer based on the language
+    let header, footer;
+    switch (storedLanguage) {
+        case 'fr':
+            header = headerFR;
+            footer = footerFR;
+            break;
+        case 'es':
+            header = headerES;
+            footer = footerES;
+            break;
+        case 'uk':
+            header = headerUK;
+            footer = footerUK;
+            break;
+        case 'at':
+            header = headerAT;
+            footer = footerAT;
+            break;
+        case 'bfl':
+            header = headerBFL;
+            footer = footerBFL;
+            break;
+        case 'bfr':
+            header = headerBFR;
+            footer = footerBFR;
+            break;
+        case 'cde':
+            header = headerCDE;
+            footer = footerCDE;
+            break;
+        case 'cfr':
+            header = headerCFR;
+            footer = footerCFR;
+            break;
+        case 'cz':
+            header = headerCZ;
+            footer = footerCZ;
+            break;
+        case 'de':
+            header = headerDE;
+            footer = footerDE;
+            break;
+        case 'dk':
+            header = headerDK;
+            footer = footerDK;
+            break;
+        case 'hu':
+            header = headerHU;
+            footer = footerHU;
+            break;
+        case 'it':
+            header = headerIT;
+            footer = footerIT;
+            break;
+        case 'nl':
+            header = headerNL;
+            footer = footerNL;
+            break;
+        case 'no':
+            header = headerNO;
+            footer = footerNO;
+            break;
+        case 'pl':
+            header = headerPL;
+            footer = footerPL;
+            break;
+        case 'pt':
+            header = headerPT;
+            footer = footerPT;
+            break;
+        case 'se':
+            header = headerSE;
+            footer = footerSE;
+            break;
+        case 'sk':
+            header = headerSK;
+            footer = footerSK;
+            break;
+        default:
+            header = headerUK; // Default value
+            footer = footerUK;
+    }
+
+    // Start constructing the HTML
+    let htmlContent = `<!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -1254,24 +1357,25 @@ img { -ms-interpolation-mode: bicubic; border:0; display:block!important; }
 																src="${item.data.label2}"
 																height="26" width="268" alt="Test Phase"
 																style="display:block; padding:0; margin:0; border:0; height:26px; width:268px;"></a>
-													</td>
-												</tr>
-												<tr>
-													<td style="font-size:0; display:block; height:4px;">&nbsp;</td>
-												</tr>
-												<!--END LABEL-->
-												<tr>
-													<td align="left" style="font-size:14px; color:#FE9600;">
-														<a class="resize_text16"
-															href="${item.data.productLink2}"
-															target="_blank"
-															style="font-size:14px; color:#FE9600; text-decoration:none;">
-															${item.data.priceOf2}<br>
-															<span class="resize_text30"
-																style="font-size:20px; font-weight:800; color:#FE9600; text-decoration:none;">${item.data.price2}</span>&nbsp;<br>
-															${item.data.unit2}
-														</a>
-													</td>
+																</td>
+															</tr>
+															<tr>
+																<td style="font-size:0; display:block; height:4px;">&nbsp;</td>
+															</tr>
+															<!--END LABEL-->
+															<tr>
+																<td align="left" style="font-size:14px; color:#FE9600;">
+																	<a class="resize_text16"
+																		href="${item.data.productLink2}"
+																		target="_blank"
+																		style="font-size:14px; color:#FE9600; text-decoration:none;">
+																		${item.data.priceOf2}<br>
+																		<span class="resize_text30"
+																			style="font-size:20px; font-weight:800; color:#FE9600; text-decoration:none;">${item.data.price2}</span>&nbsp;<br>
+																		${item.data.unit2}
+																	</a>
+																</td>
+															</tr>
 												</tr>
 												<tr>
 													<td class="view" style="font-size:0; display:none; height:15px;">
@@ -1347,7 +1451,7 @@ img { -ms-interpolation-mode: bicubic; border:0; display:block!important; }
 					<tr>
 						<td class="view" style="display:none; font-size:0;">
                             <a href="${item.data.bannerLinkText}"
-							    target="_blank" title="Test Phase">
+							target="_blank" title="Test Phase">
                                 <img class="resize"
 								    src="${item.data.bannerImage}"
 								    width="600" height="400"
@@ -1367,23 +1471,22 @@ img { -ms-interpolation-mode: bicubic; border:0; display:block!important; }
 					<tr>
 						<td class="none" style="font-size:0; display:block; width:600px;">
                             <a href="${item.data.ctaLinkText}"
-							    target="_blank" title="Test Phase">
+							target="_blank" title="Test Phase">
                                 <img src="${item.data.ctaImage}"
-								    width="600" height="120"
-								    style="display:block; padding:0; margin:0; border:0; width:600px; height:120px;"
-								    alt="Test Phase" />
+								width="600" height="120"
+								style="display:block; padding:0; margin:0; border:0; width:600px; height:120px;"
+								alt="Test Phase" />
                             </a>
                         </td>
 					</tr>
 					<tr>
 						<td class="view" style="display:none; font-size:0;">
-                            <a href="${item.data.ctaLinkText}"
-							    target="_blank" title="Test Phase">
+                            <a href="${item.data.ctaLinkText}" target="_blank" title="Test Phase">
                                 <img class="resize"
-								    src="${item.data.ctaImage}"
-								    width="600" height="160"
-								    style="display:block; padding:0; margin:0; border:0; width:600px; height:160px;"
-								    alt="Test Phase" />
+								src="${item.data.ctaImage}"
+								width="600" height="160"
+								style="display:block; padding:0; margin:0; border:0; width:600px; height:160px;"
+								alt="Test Phase" />
                             </a>
                         </td>
 					</tr>
@@ -1422,7 +1525,7 @@ img { -ms-interpolation-mode: bicubic; border:0; display:block!important; }
 	document.body.removeChild(link);
 }
 
-// Listen for the "Generate" button click
+// Écoutez l'événement "click" sur le bouton "Generate HTML"
 generateBtn.addEventListener('click', generateHTMLDocument);
 
 // If you want to clear localStorage before leaving the page:

@@ -12,11 +12,11 @@
     <form id="formglobal">
 
         <!-- Input field for document title -->
-        <label for="documentTitle">Document Title:</label>
+        <label for="documentTitle">Subject :</label>
         <input type="text" id="documentTitle"><br><br>
 
         <!-- Language selection for header/footer -->
-        <label for="language">Document Language:</label>
+        <label for="language">Country :</label>
         <select name="language" id="language">
             <option value="">---Please choose an option---</option>
             <option value="fr">FR</option>
@@ -50,18 +50,17 @@
 
         <!-- Section containing buttons to create forms -->
         <div id="create-button">
+            <button id="banner">Add Banner</button>
+            <button id="title">Add Title</button>
             <button id="oneproduct">Add 1 Product</button>
             <button id="product">Add 2 Products</button>
-            <button id="title">Add Title</button>
-            <button id="banner">Add Banner</button>
             <button id="cta">Add CTA</button>
         </div>
     </div>
 
     <!-- New div to align buttons in a row -->
     <div id="button-container">
-        <button id="submit">Save</button>
-        <button id="generateHTML">Generate HTML File</button>
+        <button id="generatebtn">Generate HTML</button>
         <button id="reset">Reset Information</button>
     </div>
 </body>

@@ -193,7 +193,6 @@ button[type="button"]:hover {
 #button-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Add space between buttons */
 }
 
 .form-product, .product-line {
